@@ -1,0 +1,539 @@
+
+
+.fondo {
+  background-color: #FFF7EF;
+}
+
+/*Estilos del header*/
+
+/*Estilos del menú normal para pc y ipad*/
+.contenidoNavegacion {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  background-color: #F3AFC9;
+  text-decoration: none;
+  margin: auto;
+  padding: 10px;
+  font-size: 2vw;
+
+}
+
+.contenidoLogo {
+  text-align: center;
+  margin: auto;
+  background-color: #FFF7EF;
+}
+/*quitamos el estilo de las listas*/
+/*Estilos del menú hamburguesa para móvil*/
+.contenidoNavResponsive li{
+  list-style:none;
+}
+.contenidoNavResponsive a{
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  max-width: 200px;
+  background-color: #F3AFC9;
+  font-variant: small-caps;
+  
+  
+}
+.contenidoNavResponsive input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+}
+.contenidoNavResponsive{
+  display:none;
+}
+
+/*media querys de móvil para menús de navegación*/
+@media only screen and (max-width: 650px) {
+  .contenidoNavegacion{
+    display:none;
+  }
+  .contenidoNavResponsive{
+    display:block;
+  }
+  
+.contenidoNavResponsive input[type="checkbox"] {
+  opacity: 0;
+}
+
+.contenidoNavResponsive {
+  color: white;
+  position: relative;
+  background-color: #F3AFC9;
+  min-height: 48px;
+}
+
+.contenidoNavResponsive nav {
+  display: none;
+}
+
+.contenidoNavResponsive input:checked ~ nav {
+  display: block;
+}
+
+.contenidoNavResponsive input:checked ~ .fa-bars {
+  display: none;
+}
+
+.contenidoNavResponsive input:not(:checked) ~ .fa-times {
+  display: none;
+}
+/*logo del botón del menú hamburguesa*/
+#hamburguesa{
+  float: right;
+}
+.contenidoNavResponsive .fa-bars, .respmenu .fa-times {
+  font-size: 48px;
+  pointer-events: none;
+}
+
+  
+}
+/*Estilos de home*/
+.Ofertas{
+  background-color: #F3AFC9;
+  font-family: 'Open Sans', sans-serif;
+  margin:auto;
+  text-align: center ;
+}
+.verTratamientos {
+  text-align: center;
+  background-color: #C5FCE6;
+  text-align: center;
+
+}
+
+.contenidoNovedades {
+  margin: auto;
+  background-color: #FFF7EF;
+  text-align: center;
+}
+
+
+#botonTratamientos {
+  color:#FFF7EF;
+  background-color: #F3AFC9;
+  text-decoration: none;
+  color:#FFF7EF;
+  
+}
+
+/*Animaciones slidein en descubre tratamientos Home*/
+.letraTitulo {
+  font-family: 'Ovo', serif;
+  font-size: 4vw;
+  color: #323C3D;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.letraDescubreTratamientos {
+  font-family: 'Ovo', serif;
+  font-size: 2.5vw;
+  padding: 20px;
+  color: #323C3D;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.letraProductos {
+  font-family: 'Ovo', serif;
+  font-size: 4vw;
+  color: #323C3D;
+}
+
+#contenedorProductos {
+  background-color: #FFF7EF;
+  padding-bottom: 100px;
+}
+
+.letraPrimavera {
+  font-family: 'Ovo', serif;
+  font-size: 2vw;
+  color: #323C3D;
+}
+
+#fotoDecoracion{
+  margin-left:20px;
+  margin-right:20px;
+  margin-bottom:50px;
+}
+
+/*Estilos del carrusel de home*/
+
+#carruselOfertas{
+  text-align: center;
+  margin: auto;
+  height: 900px;
+  width: 900px;
+}
+
+/*Estilos del Footer*/
+
+#parte1{
+  background-color: #C5FCE6;
+  opacity:70%;
+  font-family:8vw;
+  font-weight: bold;
+  font-size:3vw;
+  padding: 20px;
+  text-align: center;
+  padding-left: 100px;
+}
+#parte2{
+  background-color: #F3AFC9;
+}
+#contenedorFooter2{
+  background-color: #F3AFC9;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3vw;
+}
+#ubicacion{
+  color:#F3AFC9;
+}
+#horario{
+  color:#F3AFC9;
+}
+#citas{
+  color:#F3AFC9;
+}
+#copy{
+  color:#C5FCE6;
+  
+}
+/*Estilos SobreNosotros*/
+
+#contenidoNosotros{
+  background-color: #FFF7EF;
+}
+.tituloNosotros{
+  font-family: 'Oooh Baby', cursive;
+  font-size: 3.5vw;
+  color: #323C3D;
+}
+
+.tituloNosotros2{
+  font-family: 'Ovo', serif;
+  font-size: 2vw;
+  color: #323C3D;
+
+}
+
+.portadaNosotros{
+  text-align: center;
+  margin:auto;
+  background-color:"#ecdce2";
+}
+.fondoNosotros{
+  background-color: #FFF7EF;
+}
+#contenidoNosotros2{
+  margin:auto;
+  background-color: #ecdce2;
+}
+.tituloNosotros3{
+  font-family: 'Ovo', serif;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  padding-left: 120px;
+  padding-right: 120px;
+  font-size: 1.5vw;
+  color: #323C3D;
+}
+
+.tituloNosotros4{
+  font-family: 'Ovo', serif;
+  font-size: 2vw;
+  color: #323C3D;
+}
+
+#decoracion4{
+  margin-left:20px;
+  margin-right: 20px;
+  margin-top:20px;
+}
+#decoracion5{
+  margin-left:20px;
+  margin-right: 20px;
+  margin-top:20px;
+}
+#decoracion6{
+  margin-left:20px;
+  margin-right: 20px;
+  margin-top:20px;
+}
+#decoracion7{
+  margin-left:20px;
+  margin-right: 20px;
+  margin-top:20px;
+}
+
+/*Estilos de tratamientos*/
+.tratamientosFondo{
+  background-color: #FFF7EF;
+}
+#tratamientos{
+  background-color: #FFD9D6;
+}
+#facial{
+  background-color: #F1BEB9;
+  text-align: center;
+}
+#fotohigiene{
+  text-align: center;
+}
+#higieneFacialLetrero{
+  font-family: 'Oooh Baby', cursive;
+  font-size: 6vw;
+  color: #323C3D;
+  background-color: #F1BEB9;
+  padding: 20px;
+}
+#higieneFacial{
+  padding-left: 80px;
+  padding-right: 80px;
+  font-family: 'Ovo', serif;
+  font-size: 6vw;
+  color: #323C3D;
+  background-color: #F1BEB9;
+  margin:auto;
+}
+.higieneFacial2{
+  font-family: 'Open Sans', sans-serif;
+}
+.hidral2{
+  font-family: 'Open Sans', sans-serif;
+}
+.peeling2{
+  font-family: 'Open Sans', sans-serif;
+}
+.maquillaje2{
+  font-family: 'Open Sans', sans-serif;
+}
+#hidral{
+  background-color: #C5FCE6;
+  text-align: center;
+}
+#higieneHidralLetrero{
+  font-family: 'Oooh Baby', cursive;
+  font-size: 6vw;
+  color: #323C3D;
+  background-color: #C5FCE6;
+  padding: 20px;
+}
+#higieneHydral{
+  padding-left: 80px;
+  padding-right: 80px;
+  font-family: 'Ovo', serif;
+  font-size: 6vw;
+  color: #323C3D;
+  background-color: #C5FCE6;
+  margin:auto;
+}
+#fotohidral{
+  margin:auto;
+}
+#fotohigiene{
+  margin:auto;
+}
+#containerPeeling{
+  font-family: 'Ovo', serif;
+  font-size: 6vw;
+  color: #323C3D;
+  background-color:  #ECDCE2;
+  padding: 20px;
+  text-align: center;
+}
+#higienePeelingLetrero{
+  font-family: 'Oooh Baby', cursive;
+  font-size: 6vw;
+  color: #323C3D;
+  background-color:  #ECDCE2;
+  padding: 20px;
+}
+#fotoPeeling{
+  margin:auto;
+}
+#higienePeeling{
+  padding-left: 80px;
+  padding-right: 80px;
+  font-family: 'Ovo', serif;
+  font-size: 4vw;
+  color: #323C3D;
+  background-color:  #ECDCE2;
+  margin:auto;
+  padding-bottom: 20px;
+  
+}
+
+#containerMakeUp{
+  font-family: 'Ovo', serif;
+  font-size: 6vw;
+  color: #323C3D;
+  background-color:  #F3AFC9;
+  padding: 20px;
+  text-align: center;
+}
+#fotoMakeup{
+  margin:auto;
+}
+#maquillajeContenido{
+  padding-left: 80px;
+  padding-right: 80px;
+  font-family: 'Ovo', serif;
+  font-size: 4vw;
+  color: #323C3D;
+  background-color:  #F3AFC9;
+  margin:auto;
+  padding-bottom: 20px;
+  
+}
+/*Estilos de blog*/
+.blogFondo{
+  background-color: "#FFF7EF";
+}
+/*Estilos de Contacto */
+.ContactoFondo{
+  background-color: "#FFF7EF";
+}
+/*Estilos de Menú cita*/
+.menuCitaFondo{
+  background-color: "#FFF7EF";
+}
+/*Estilos de modificaCita*/
+.modificaCitaFondo{
+  background-color: "#FFF7EF";
+}
+/*Estilos de eliminaCita*/
+.eliminaCitaFondo{
+  background-color: "#FFF7EF";
+}
+/*Estilos de pideCita*/
+.pideCitaFondo{
+  background-color: "#FFF7EF";
+}
+/*Estilos de veCita*/
+.veCitaFondo{
+  background-color: "#FFF7EF";
+}
+
+
