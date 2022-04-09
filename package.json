@@ -16,7 +16,7 @@
     "react-fade-in": "^2.0.1",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.0",
     "react-scroll": "^1.8.6",
     "react-spring": "^9.4.4",
     "reactstrap": "^9.0.1",

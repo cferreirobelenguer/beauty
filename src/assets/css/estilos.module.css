@@ -333,7 +333,7 @@
 
 .tituloNosotros2{
   font-family: 'Ovo', serif;
-  font-size: 2vw;
+  font-size: 3.2vw;
   color: #323C3D;
 
 }
@@ -356,13 +356,13 @@
   padding-bottom: 50px;
   padding-left: 120px;
   padding-right: 120px;
-  font-size: 1.5vw;
+  font-size: 3vw;
   color: #323C3D;
 }
 
 .tituloNosotros4{
   font-family: 'Ovo', serif;
-  font-size: 2vw;
+  font-size: 3vw;
   color: #323C3D;
 }
 
@@ -509,7 +509,19 @@
 }
 /*Estilos de blog*/
 .blogFondo{
-  background-color: "#FFF7EF";
+  background-color: #FFF7EF;
+}
+#blogCabecera{
+  font-family: 'Ovo', serif;
+  font-size: 3vw;
+  color: #323C3D;
+  background-color:  #FFF7EF;
+  margin: auto;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+
 }
 /*Estilos de Contacto */
 .ContactoFondo{
