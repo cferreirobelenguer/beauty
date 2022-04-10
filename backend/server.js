@@ -6,7 +6,8 @@ var app=require('./servidor');
 //Indicamos el puerto
 var port=3900;
 
-//mongoose.set('useFindAndModify',false);
+
+//Conexión a la base de datos clientesCitas en mongoDB
 mongoose.Promise=global.Promise;
 mongoose.connect('mongodb://localhost:27017/clientesCitas',{useNewUrlParser: true}).then(()=>{
     console.log('La conexión a la bbdd se ha realizado bien');

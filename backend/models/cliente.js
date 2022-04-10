@@ -8,7 +8,8 @@ var clienteSchema=Schema({
     nombre:String,
     apellidos:String,
     tratamiento:String,
-    date:Date
+    fecha:String,
+    hora:String
 });
 
 module.exports=mongoose.model('Cliente',clienteSchema);

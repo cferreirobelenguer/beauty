@@ -1,4 +1,4 @@
-'use strict'
+ 'use strict'
 
 //Cargar modulos de node para crear el servidor
 //Cargamos el módulo de node js Express
