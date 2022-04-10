@@ -11,6 +11,8 @@ var router=express.Router();
 //router.get('/test', clienteController.test);
 
 //Rutas útiles
+//Ruta para guardar los datos de las citas de los clientes
 router.post('/save',clienteController.save);
-
+//Ruta para buscar datos de las citas por nombre, apellidos y hora
+router.get('/search/:nombre&:apellidos&:hora',clienteController.search);
 module.exports= router;
