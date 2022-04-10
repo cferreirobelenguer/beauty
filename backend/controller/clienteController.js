@@ -94,6 +94,8 @@ var controller={
         var buscarHora=req.params.hora;
 
         console.log(buscarNombre);
+        console.log(buscarApellidos);
+        console.log(buscarHora);
         
         //Find
         cliente.find(
@@ -122,6 +124,34 @@ var controller={
             });
         });
 
+    
+    },
+    //MÉTODO PARA ELIMINAR POR ID
+    delete:(req,res)=>{
+        //Recoger el id
+        var clienteId=req.params.id;
+        console.log(clienteId);
+        //Find and delete
+        cliente.findOneAndDelete({_id:clienteId}, (err,clienteRemove)=>{
+            if(err){
+                //Error en servidor
+                return res.status(500).send({
+                    status:'error',
+                    message:'Error al borrar'
+                });
+            }
+                if(!clienteRemove){
+                    //Error en borrado
+                    return res.status(404).send({
+                        status:'error',
+                        message:'No se ha podido borrar'
+                    });
+            }
+            return res.status(200).send({
+                status:'success',
+                cliente:clienteRemove
+            });
+        });
     
     }
 

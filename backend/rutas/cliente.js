@@ -15,4 +15,7 @@ var router=express.Router();
 router.post('/save',clienteController.save);
 //Ruta para buscar datos de las citas por nombre, apellidos y hora
 router.get('/search/:nombre&:apellidos&:hora',clienteController.search);
+
+//Ruta para borrar datos por id
+router.delete('/delete/:id', clienteController.delete);
 module.exports= router;
