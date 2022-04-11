@@ -1,5 +1,5 @@
 
-
+/*fondo general del index*/
 .fondo {
   background-color: #FFF7EF;
 }
@@ -7,6 +7,22 @@
 /*Estilos del header*/
 
 /*Estilos del menú normal para pc y ipad*/
+#cabeceraRedes{
+  background-color:#FFF7EF ;
+  padding-top:10px;
+  color:#F3AFC9;
+  font-size: 30px;
+  padding-right: 70px;
+
+}
+#cabeceraRedes1{
+  background-color:#FFF7EF ;
+  padding-top:10px;
+  color:#F3AFC9;
+  font-size: 1.75vw;
+  padding-right: 70px;
+
+}
 .contenidoNavegacion {
   position: -webkit-sticky;
   position: sticky;
@@ -15,7 +31,7 @@
   text-decoration: none;
   margin: auto;
   padding: 10px;
-  font-size: 2vw;
+  font-size: 24px;
 
 }
 
@@ -125,13 +141,14 @@
   background-color: #F3AFC9;
   text-decoration: none;
   color:#FFF7EF;
+  font-size: 2vw;
   
 }
 
 /*Animaciones slidein en descubre tratamientos Home*/
 .letraTitulo {
   font-family: 'Ovo', serif;
-  font-size: 4vw;
+  font-size: 5vw;
   color: #323C3D;
   animation: fadeIn 5s;
   -webkit-animation: fadeIn 5s;
@@ -192,7 +209,7 @@
 
 .letraDescubreTratamientos {
   font-family: 'Ovo', serif;
-  font-size: 2.5vw;
+  font-size: 3vw;
   padding: 20px;
   color: #323C3D;
   animation: fadeIn 5s;
@@ -255,7 +272,7 @@
 
 .letraProductos {
   font-family: 'Ovo', serif;
-  font-size: 4vw;
+  font-size: 22 px;
   color: #323C3D;
 }
 
@@ -266,7 +283,7 @@
 
 .letraPrimavera {
   font-family: 'Ovo', serif;
-  font-size: 2vw;
+  font-size: 22px;
   color: #323C3D;
 }
 
@@ -292,8 +309,8 @@
   opacity:70%;
   font-family:8vw;
   font-weight: bold;
-  font-size:3vw;
-  padding: 20px;
+  font-size:22px;
+  padding: 100px;
   text-align: center;
   padding-left: 100px;
 }
@@ -305,7 +322,7 @@
   margin: auto;
   padding: 20px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 3vw;
+  font-size: 22px;
 }
 #ubicacion{
   color:#F3AFC9;
@@ -327,13 +344,13 @@
 }
 .tituloNosotros{
   font-family: 'Oooh Baby', cursive;
-  font-size: 3.5vw;
+  font-size: 40px;
   color: #323C3D;
 }
 
 .tituloNosotros2{
   font-family: 'Ovo', serif;
-  font-size: 3.2vw;
+  font-size: 22px;
   color: #323C3D;
 
 }
@@ -356,13 +373,13 @@
   padding-bottom: 50px;
   padding-left: 120px;
   padding-right: 120px;
-  font-size: 3vw;
+  font-size: 20px;
   color: #323C3D;
 }
 
 .tituloNosotros4{
   font-family: 'Ovo', serif;
-  font-size: 3vw;
+  font-size: 24px;
   color: #323C3D;
 }
 
@@ -419,6 +436,9 @@
 }
 .higieneFacial2{
   font-family: 'Open Sans', sans-serif;
+  font-size: 2.5vw;
+  margin:auto;
+  padding: 50px;
 }
 .hidral2{
   font-family: 'Open Sans', sans-serif;
@@ -513,7 +533,7 @@
 }
 #blogCabecera{
   font-family: 'Ovo', serif;
-  font-size: 3vw;
+  font-size: 24px;
   color: #323C3D;
   background-color:  #FFF7EF;
   margin: auto;
@@ -522,6 +542,22 @@
   padding-bottom: 50px;
   padding-top: 50px;
 
+}
+#bronceado{
+  padding:50px;
+  padding-left: 80px;
+  padding-right: 80px;
+  font-family: 'Ovo', serif;
+  font-size: 22px;
+  color: #323C3D;
+}
+#contenidoBronceado{
+  padding:50px;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-family: 'Ovo', serif;
+  font-size: 22px;
+  color: #323C3D;
 }
 /*Estilos de Contacto */
 .ContactoFondo{

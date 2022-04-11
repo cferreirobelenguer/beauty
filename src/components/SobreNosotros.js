@@ -4,7 +4,6 @@ import decoracion4 from '../assets/images/decoracion4.png';
 import decoracion5 from '../assets/images/decoracion5.png';
 import decoracion6 from '../assets/images/decoracion6.png';
 import decoracion7 from '../assets/images/decoracion7.png';
-import onda from '../assets/images/onda.png';
 import SobreNosotrosImagen from '../assets/images/sobreNosotros.png';
 
 class SobreNosotros extends Component{
@@ -20,10 +19,7 @@ class SobreNosotros extends Component{
         return(
             
             <div className={styles.fondoNosotros}>
-                {/*Onda decorativa en todas las vistas*/}
-                <div className="d-flex flex-column bd-highlight mb-3">
-                    <img src={onda} width="1500" height="300" className="img-fluid"></img>
-                </div>
+            
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoNosotros}>
                     <div class="d-flex flex-row-reverse" data-aos="zoom-in"><img src={decoracion4} id={styles.decoracion4} width="110" heigth="110" className="img-fluid"></img></div>
                     <div class="d-flex justify-content-center"><h1 className={styles.tituloNosotros}>¿Qué es beauty?</h1></div>
@@ -33,7 +29,7 @@ class SobreNosotros extends Component{
                     <div class="d-flex justify-content-center"><br></br></div>
                 </div>
                 <div className={styles.portadaNosotros} data-aos="fade-down">
-                    <img src={SobreNosotrosImagen} onMouseEnter={conFiltro} onMouseLeave={sinFiltro} width="1300" height="1300" className="img-fluid"></img>
+                    <img src={SobreNosotrosImagen} onMouseEnter={conFiltro} onMouseLeave={sinFiltro} width="1310" height="1310" className="img-fluid"></img>
                 </div>
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoNosotros2}>
                     <div class="d-flex justify-content-center"><br></br></div>

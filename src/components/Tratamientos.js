@@ -4,8 +4,6 @@ import higieneHydral from '../assets/images/hidralInfusion.png';
 import peeling from '../assets/images/Peeling.png';
 import higiene from '../assets/images/facialPurifying.png';
 import maquillaje from '../assets/images/maquillaje.png';
-import tratamientos from '../assets/images/portadatratamientos.jpg';
-import onda from '../assets/images/onda.png';
 import styles from '../assets/css/estilos.module.css';
 import decoracion4 from '../assets/images/decoracion4.png';
 import decoracion5 from '../assets/images/decoracion5.png';
@@ -13,19 +11,10 @@ import decoracion5 from '../assets/images/decoracion5.png';
 class Tratamientos extends Component{
 
     render(){
-                  //Función que aplica filtro gris a la foto de sobre nosotros
-    function conFiltro(e){
-        e.target.style.filter='grayscale(50%)';
-    }
-    function sinFiltro(e){
-        e.target.style.filter='grayscale(0%)';
-    }
+    
         return(
             <div className={styles.tratamientosFondo}>
-                {/*Onda decorativa en todas las vistas*/}
-                <div className="d-flex flex-column bd-highlight mb-3">
-                        <img src={onda} width="1500" height="300" className="img-fluid"></img>
-                </div>
+    
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoNosotros}>
                     <div class="d-flex flex-row-reverse" data-aos="zoom-in"><img src={decoracion4} id={styles.decoracion4} width="110" heigth="110" className="img-fluid"></img></div>
                     <div class="d-flex justify-content-center"><h1 className={styles.tituloNosotros}>Nuestros tratamientos</h1></div>
@@ -37,15 +26,23 @@ class Tratamientos extends Component{
                 
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.facial}>
                     <div className="d-flex  justify-content-center">
-                        <img src={higiene}  onMouseEnter={conFiltro} onMouseLeave={sinFiltro} width="1200" height="800" className="img-fluid" alt="higieneFacial"/>
+                        <img src={higiene}  width="1200" height="800" className="img-fluid" alt="higieneFacial"/>
                     </div>
                     
                     <div className="d-flex  justify-content-center" id={styles.higieneFacial}>
                         <div class="mt-4 p-5  text-dark rounded">
                             <h1>Higiene Facial Purifying</h1>
-                            <div className={styles.higieneFacial2}>
-                                <h6>Higiene facial completa que purifica la piel en todos los niveles. Resultado: una piel limpia, resplandeciente e inmensamente purificada.</h6>
-                                <h6>Precio 49 €</h6>
+                            <div >
+                                <div class="d-flex justify-content-center">
+                                    <details>
+                                        <summary className={styles.higieneFacial2}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                        </svg></summary>
+                                        <h6>Higiene facial completa que purifica la piel en todos los niveles. Resultado: una piel limpia, resplandeciente e inmensamente purificada.</h6>
+                                        <h6>Precio 49 €</h6>
+                                    </details>
+                                </div>
                             </div>
             
                         </div>   
@@ -54,7 +51,7 @@ class Tratamientos extends Component{
                 </div>
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.hidral}>
                     <div className="d-flex  justify-content-center">
-                        <img src={higieneHydral}  onMouseEnter={conFiltro} onMouseLeave={sinFiltro} width="1200" height="800" className="img-fluid" alt="higieneFacial"/>
+                        <img src={higieneHydral}  width="1200" height="800" className="img-fluid" alt="higieneFacial"/>
                     </div>
                     
                     <div className="d-flex  justify-content-center" id={styles.higieneHydral}>
@@ -62,45 +59,73 @@ class Tratamientos extends Component{
                             
                             <h1>Limpieza Hydral Infusión</h1>
                             <div className={styles.hidral2}>
-                                <h6>Limpieza completa de  la piel con tecnología Hydral infusión</h6>
-                                <h6>Precio 70 €</h6>
+                            <div class="d-flex justify-content-center">
+                                    <details>
+                                        <summary className={styles.higieneFacial2}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                        </svg></summary>
+                                        <h6>Limpieza completa de  la piel con tecnología Hydral infusión</h6>
+                                        <h6>Precio 70 €</h6>
+                                    </details>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.containerPeeling}>
                     <div className="d-flex  justify-content-center">
-                        <img src={peeling}  onMouseEnter={conFiltro} onMouseLeave={sinFiltro} width="1200" height="800" className="img-fluid" alt="higieneFacial"/>
+                        <img src={peeling}  width="1200" height="800" className="img-fluid" alt="higieneFacial"/>
                     </div>
                     
                     <div className="d-flex  justify-content-center" id={styles.higienePeeling}>
                         <div class="mt-4 p-5  text-dark rounded">
                             <h1>Limpieza Hydral Infusión</h1>
                             <div className={styles.peeling2}>
-                                <h6>Tratamiento con peelings puros que tienen una acción renovadora de la piel por lo tanto una mejora de la calidad de la piel</h6>
-                                <h6>Precio 80 €</h6>
+                            <div class="d-flex justify-content-center">
+                                    <details>
+                                        <summary className={styles.higieneFacial2}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                        </svg></summary>
+                                        <h6>Tratamiento con peelings puros que tienen una acción renovadora de la piel por lo tanto una mejora de la calidad de la piel</h6>
+                                        <h6>Precio 80 €</h6>
+                                    </details>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.containerMakeUp}>
                     <div className="d-flex  justify-content-center">
-                    <img src={maquillaje}  onMouseEnter={conFiltro} onMouseLeave={sinFiltro} width="1200" height="800" className="img-fluid" alt="higieneFacial"/>
+                    <img src={maquillaje}  width="1200" height="800" className="img-fluid" alt="higieneFacial"/>
                     </div>
                     
                     <div className="d-flex  justify-content-rigth" id={styles.maquillajeContenido}>
                         <div class="mt-4 p-5  text-dark rounded">
                             <h1>Maquillaje completo</h1>
                             <div className={styles.maquillaje2}>
-                                <h6>Ven a ponerte guapa con nosotros, hacemos maquillaje para eventos, bodas, etc</h6>
-                                <h6 >Precio 70 €</h6>
+                            <div class="d-flex justify-content-center">
+                                    <details>
+                                        <summary className={styles.higieneFacial2}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                        </svg></summary>
+                                        <h6>Ven a ponerte guapa con nosotros, hacemos maquillaje para eventos, bodas, etc</h6>
+                                        <h6 >Precio 70 €</h6>
+                                    </details>
+                                </div>
+                                
+                            </div>
                             </div>
                             
                         </div>
                     </div>
                 </div>
                 
-            </div>
+            
         );
     }
 
