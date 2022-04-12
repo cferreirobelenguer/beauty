@@ -44,7 +44,7 @@ class Home extends Component{
                             <div className="d-flex  justify-content-center">
                                 <div class="mt-4 p-5  text-dark rounded">
                                     <h1 className={styles.letraTitulo}>&nbsp;&nbsp;Déjate mimar</h1>
-                                    <h3 className={styles.letraDescubreTratamientos}>&nbsp;&nbsp;&nbsp;&nbsp;Descubre nuestros tratamientos</h3>
+                                    <h3 className={styles.letraDescubreTratamientos}>&nbsp;&nbsp;Descubre nuestros tratamientos</h3>
                                     <Button class="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/Tratamientos" className="text-decoration-none text-light" >Tratamientos</Link></Button>
                                 </div>
                             </div>
@@ -65,14 +65,10 @@ class Home extends Component{
                         <div className="d-flex  justify-content-center" data-aos="fade-down"><h1 className={styles.letraProductos} id="letraProductos2"> ¿A qué esperas?</h1></div>
                         <div className="d-flex  justify-content-center" data-aos="fade-down"><h3 className={styles.letraPrimavera}>¡Pon a punto tu piel para la primavera!</h3></div>
                         <div className="d-flex  justify-content-center"><br></br></div>
-                        <div className="d-flex  justify-content-center"><br></br></div>
                         <div className="d-flex  justify-content-center" data-aos="zoom-in">
                         <Button class="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/menuCita" className="text-decoration-none text-light" >Pide cita</Link></Button>
                         </div>
                         <div className="d-flex justify-content-right" data-aos="zoom-in"><img id={styles.fotoDecoracion} src={decoracion3} width="250" height="250" className="img-fluid" alt="fotoEstrellas"/></div>
-                        
-
-                
     </div>
 </div>
             );

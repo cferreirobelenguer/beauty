@@ -1,6 +1,7 @@
 import React,{Component} from "react";
 import styles from '../assets/css/estilos.module.css';
 import bronceador from '../assets/images/broncearse.png';
+import luminosidad from '../assets/images/luminosidad.png';
 import decoracion4 from '../assets/images/decoracion4.png';
 import decoracion5 from '../assets/images/decoracion5.png';
 import logo from '../assets/images/logo.png';
@@ -37,9 +38,9 @@ class Blog extends Component{
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">
-                        {/*Se abren los post cuando se pulsa sigue leyendo a través de las etiquetas details y summary*/}
+                        {/*Se abren los post cuando se pulsa el triángulo a través de las etiquetas details y summary*/}
                         <details>
-                            <summary id={styles.contenidoBronceado}>Sigue leyendo</summary>
+                            <summary id={styles.contenidoBronceado}></summary>
                             <div class="d-flex justify-content-center" id={styles.contenidoBronceado}>
                             
                             <h6>En el post de hoy, quiero compartir con vosotras los productos que estoy utilizando cuando voy a la plata o a la piscina y así mi piel está totalmente protegida, ¿os apetece?
@@ -63,6 +64,42 @@ class Blog extends Component{
                         </details>
                     </div>
                     
+                    <div className={styles.portadaNosotros} data-aos="fade-down">
+                        <img src={luminosidad} onMouseEnter={conFiltro} onMouseLeave={sinFiltro} width="1000" height="1000" className="img-fluid"></img>
+                    </div>
+                <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoNosotros}>
+                    <div class="d-flex justify-content-center">
+                        
+                        <div class="d-flex justify-content-center" id={styles.bronceado}>
+                            <h2>Chute de luminosidad para el rostro</h2>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        {/*Se abren los post cuando se pulsa el triángulo a través de las etiquetas details y summary*/}
+                        <details>
+                            <summary id={styles.contenidoBronceado}></summary>
+                            <div class="d-flex justify-content-center" id={styles.contenidoBronceado}>
+                            
+                            <h6>Todas y todos tenemos esos días en los que nos hemos levantado con mal color de cara y nos tomamos la piel como apagada y sin luz. Esto puede ser debido a un mal descanso, falta de sueño, estrés, días de mucho frío que hace que la piel se reseque más de la cuenta por lo que hará que se vea tirante, seca, etc...
+                                <br></br>En la entrada de hoy quiero compartir con vosotras los productos que suelo utilizar y algunos tips para darle un cambio radical a la piel.<br>
+                                </br>
+                                1. Strobe Cream de M.A.C: Textura cremosa con partículas nacaradas que a parte de aportar luz al rostro, está compuesto por un complejo de vitaminas, extractos botánicos y té verde para revitalizar al instante la piel cansada.
+                                <br></br>
+                                2. Write oil-free brilliant SPF50 de Natura Bissé. Fue mi producto favorito del mes de enero, aunque en realidad para qué os voy a engañar, es mi producto estrella cada día, cada semana y cada mes jajaja. Todo lo que cuesta lo vale.
+                                <br></br>
+                                3. Booster 'Energy' de Clarins. Mi último descubrimiento y no por ello menos importante que las demás opciones. Se trata de este nuevo producto de la firma francesa Clarins con el que conseguiremos reducir y atenuar las marcas de cansancio tonificando y devolviendo la energía necesaria a la piel.
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
+                                <path d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5ZM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1Zm0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
+                                </svg>
+                            </h6>
+                            </div>
+                            
+                            <div class="d-flex justify-content-rigth" id={styles.bronceado}>
+                            Publicado por&nbsp;&nbsp; <Avatar alt="beautyBlog" src={logo}/>&nbsp;
+                            </div>
+                        </details>
+                        </div>
+                    </div>
                     
                 </div>
                 

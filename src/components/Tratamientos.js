@@ -35,10 +35,7 @@ class Tratamientos extends Component{
                             <div >
                                 <div class="d-flex justify-content-center">
                                     <details>
-                                        <summary className={styles.higieneFacial2}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                                        </svg></summary>
+                                        <summary className={styles.higieneFacial2}></summary>
                                         <h6>Higiene facial completa que purifica la piel en todos los niveles. Resultado: una piel limpia, resplandeciente e inmensamente purificada.</h6>
                                         <h6>Precio 49 €</h6>
                                     </details>
@@ -61,10 +58,7 @@ class Tratamientos extends Component{
                             <div className={styles.hidral2}>
                             <div class="d-flex justify-content-center">
                                     <details>
-                                        <summary className={styles.higieneFacial2}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                                        </svg></summary>
+                                        <summary className={styles.higieneFacial2}></summary>
                                         <h6>Limpieza completa de  la piel con tecnología Hydral infusión</h6>
                                         <h6>Precio 70 €</h6>
                                     </details>
@@ -85,10 +79,7 @@ class Tratamientos extends Component{
                             <div className={styles.peeling2}>
                             <div class="d-flex justify-content-center">
                                     <details>
-                                        <summary className={styles.higieneFacial2}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                                        </svg></summary>
+                                        <summary className={styles.higieneFacial2}></summary>
                                         <h6>Tratamiento con peelings puros que tienen una acción renovadora de la piel por lo tanto una mejora de la calidad de la piel</h6>
                                         <h6>Precio 80 €</h6>
                                     </details>
@@ -103,16 +94,13 @@ class Tratamientos extends Component{
                     <img src={maquillaje}  width="1200" height="800" className="img-fluid" alt="higieneFacial"/>
                     </div>
                     
-                    <div className="d-flex  justify-content-rigth" id={styles.maquillajeContenido}>
+                    <div className="d-flex  justify-content-center text" id={styles.maquillajeContenido}>
                         <div class="mt-4 p-5  text-dark rounded">
                             <h1>Maquillaje completo</h1>
                             <div className={styles.maquillaje2}>
                             <div class="d-flex justify-content-center">
                                     <details>
-                                        <summary className={styles.higieneFacial2}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                                        </svg></summary>
+                                        <summary className={styles.higieneFacial2}></summary>
                                         <h6>Ven a ponerte guapa con nosotros, hacemos maquillaje para eventos, bodas, etc</h6>
                                         <h6 >Precio 70 €</h6>
                                     </details>

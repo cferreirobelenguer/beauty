@@ -12,15 +12,14 @@
   padding-top:10px;
   color:#F3AFC9;
   font-size: 30px;
-  padding-right: 70px;
 
 }
 #cabeceraRedes1{
   background-color:#FFF7EF ;
   padding-top:10px;
   color:#F3AFC9;
-  font-size: 1.75vw;
-  padding-right: 70px;
+  font-size: 2vw;
+  
 
 }
 .contenidoNavegacion {
@@ -53,8 +52,6 @@
   max-width: 200px;
   background-color: #F3AFC9;
   font-variant: small-caps;
-  
-  
 }
 .contenidoNavResponsive input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
   position: absolute;
@@ -119,6 +116,7 @@
 .Ofertas{
   background-color: #F3AFC9;
   font-family: 'Open Sans', sans-serif;
+  font-size: 3vw;
   margin:auto;
   text-align: center ;
 }
@@ -148,7 +146,7 @@
 /*Animaciones slidein en descubre tratamientos Home*/
 .letraTitulo {
   font-family: 'Ovo', serif;
-  font-size: 5vw;
+  font-size: 4.5vw;
   color: #323C3D;
   animation: fadeIn 5s;
   -webkit-animation: fadeIn 5s;
@@ -209,8 +207,8 @@
 
 .letraDescubreTratamientos {
   font-family: 'Ovo', serif;
-  font-size: 3vw;
-  padding: 20px;
+  font-size: 2.5vw;
+  padding: 5px;
   color: #323C3D;
   animation: fadeIn 5s;
   -webkit-animation: fadeIn 5s;
@@ -272,7 +270,7 @@
 
 .letraProductos {
   font-family: 'Ovo', serif;
-  font-size: 22 px;
+  font-size:3.5vw;
   color: #323C3D;
 }
 
@@ -283,7 +281,7 @@
 
 .letraPrimavera {
   font-family: 'Ovo', serif;
-  font-size: 22px;
+  font-size:3.5vw;
   color: #323C3D;
 }
 
@@ -293,23 +291,15 @@
   margin-bottom:50px;
 }
 
-/*Estilos del carrusel de home*/
-
-#carruselOfertas{
-  text-align: center;
-  margin: auto;
-  height: 900px;
-  width: 900px;
-}
 
 /*Estilos del Footer*/
 
 #parte1{
   background-color: #C5FCE6;
   opacity:70%;
-  font-family:8vw;
+  font-family: 'Ovo', serif;
   font-weight: bold;
-  font-size:22px;
+  font-size:4vw;
   padding: 100px;
   text-align: center;
   padding-left: 100px;
@@ -322,7 +312,7 @@
   margin: auto;
   padding: 20px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 22px;
+  font-size:4vw;
 }
 #ubicacion{
   color:#F3AFC9;
@@ -344,13 +334,13 @@
 }
 .tituloNosotros{
   font-family: 'Oooh Baby', cursive;
-  font-size: 40px;
+  font-size:6vw;
   color: #323C3D;
 }
 
 .tituloNosotros2{
   font-family: 'Ovo', serif;
-  font-size: 22px;
+  font-size:4vw;
   color: #323C3D;
 
 }
@@ -371,15 +361,15 @@
   font-family: 'Ovo', serif;
   padding-top: 100px;
   padding-bottom: 50px;
-  padding-left: 120px;
-  padding-right: 120px;
-  font-size: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+  font-size:3vw;
   color: #323C3D;
 }
 
 .tituloNosotros4{
   font-family: 'Ovo', serif;
-  font-size: 24px;
+  font-size: 4vw;
   color: #323C3D;
 }
 
@@ -426,18 +416,17 @@
   padding: 20px;
 }
 #higieneFacial{
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 70px;
+  padding-right: 70px;
   font-family: 'Ovo', serif;
   font-size: 6vw;
   color: #323C3D;
   background-color: #F1BEB9;
-  margin:auto;
+  
 }
 .higieneFacial2{
   font-family: 'Open Sans', sans-serif;
   font-size: 2.5vw;
-  margin:auto;
   padding: 50px;
 }
 .hidral2{
@@ -467,7 +456,7 @@
   font-size: 6vw;
   color: #323C3D;
   background-color: #C5FCE6;
-  margin:auto;
+  
 }
 #fotohidral{
   margin:auto;
@@ -500,7 +489,6 @@
   font-size: 4vw;
   color: #323C3D;
   background-color:  #ECDCE2;
-  margin:auto;
   padding-bottom: 20px;
   
 }
@@ -517,14 +505,14 @@
   margin:auto;
 }
 #maquillajeContenido{
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 70px;
+  padding-right: 70px;
   font-family: 'Ovo', serif;
-  font-size: 4vw;
+  font-size: 3vw;
   color: #323C3D;
   background-color:  #F3AFC9;
-  margin:auto;
   padding-bottom: 20px;
+  text-align: center;
   
 }
 /*Estilos de blog*/
@@ -533,12 +521,12 @@
 }
 #blogCabecera{
   font-family: 'Ovo', serif;
-  font-size: 24px;
+  font-size: 2.5vw;
   color: #323C3D;
   background-color:  #FFF7EF;
   margin: auto;
-  padding-left: 120px;
-  padding-right: 120px;
+  padding-left: 80px;
+  padding-right: 80px;
   padding-bottom: 50px;
   padding-top: 50px;
 
@@ -553,12 +541,13 @@
 }
 #contenidoBronceado{
   padding:50px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 80px;
+  padding-right: 80px;
   font-family: 'Ovo', serif;
   font-size: 22px;
   color: #323C3D;
 }
+
 /*Estilos de Contacto */
 .ContactoFondo{
   background-color: "#FFF7EF";
