@@ -104,10 +104,10 @@ class Tratamientos extends Component{
                                         <h6>Ven a ponerte guapa con nosotros, hacemos maquillaje para eventos, bodas, etc</h6>
                                         <h6 >Precio 70 €</h6>
                                     </details>
-                                </div>
+                            </div>
                                 
-                            </div>
-                            </div>
+                        </div>
+                    </div>
                             
                         </div>
                     </div>
