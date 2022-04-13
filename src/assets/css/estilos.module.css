@@ -552,6 +552,14 @@
 .ContactoFondo{
   background-color: "#FFF7EF";
 }
+#contenidoFormulario{
+  background-color: #ECDCE2;
+  margin:auto;
+  padding: 100px;
+}
+#estiloCajas{
+  background-color: #ECDCE2;
+}
 /*Estilos de Menú cita*/
 .menuCitaFondo{
   background-color: "#FFF7EF";

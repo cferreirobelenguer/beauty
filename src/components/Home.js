@@ -66,7 +66,7 @@ class Home extends Component{
                         <div className="d-flex  justify-content-center" data-aos="fade-down"><h3 className={styles.letraPrimavera}>¡Pon a punto tu piel para la primavera!</h3></div>
                         <div className="d-flex  justify-content-center"><br></br></div>
                         <div className="d-flex  justify-content-center" data-aos="zoom-in">
-                        <Button class="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/menuCita" className="text-decoration-none text-light" >Pide cita</Link></Button>
+                        <Button className="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/menuCita" className="text-decoration-none text-light" >Pide cita</Link></Button>
                         </div>
                         <div className="d-flex justify-content-right" data-aos="zoom-in"><img id={styles.fotoDecoracion} src={decoracion3} width="250" height="250" className="img-fluid" alt="fotoEstrellas"/></div>
     </div>
