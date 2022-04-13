@@ -24,6 +24,17 @@ app.use(bodyParser.json());
 
 
 //Activar el CORS para permitir peticiones desde el frontend
+// Configurar cabeceras y cors
+//middleware que se ejecuta antes de las rutas que tengamos
+app.use((req, res, next) => {
+    //Configuramos el control de acceso para que cualquier cliente pueda hacer peticiones ajax
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+    //permitimos métodos http 
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+    next();
+});
 
 //Añadir prefijos a las rutas /Cargar rutas
 app.use('/api',clientes_rutas);

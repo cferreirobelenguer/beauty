@@ -119,7 +119,7 @@ var controller={
      //MÉTODO BUSCADOR DE DATOS DE LAS CITAS POR NOMBRE, APELLIDOS, FECHA Y HORA
     //MÉTODO NECESARIO PARA SAVE Y UPDATE
     /*search:(req,res)=>{
-        //Sacar el String a buscar nombre, apellidos y hora
+        //Sacar el String a buscar nombre, apellidos fecha y hora
         var buscarNombre=req.params.nombre;
         var buscarApellidos=req.params.apellidos;
         var buscarHora=req.params.hora;
