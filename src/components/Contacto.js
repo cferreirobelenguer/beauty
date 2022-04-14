@@ -2,10 +2,12 @@ import React,{Component} from "react";
 import styles from '../assets/css/estilos.module.css';
 import decoracion4 from '../assets/images/decoracion4.png';
 import decoracion5 from '../assets/images/decoracion5.png';
-import decoracion7 from '../assets/images/decoracion7.png';
+import decoracion8 from '../assets/images/decoracion8.png';
+import newsletter from '../assets/images/newsletter.jpg';
+import Swal from 'sweetalert2';
 
 class Contacto extends Component{
-        //Creamos referencias vinculadas a los datos que recogemos del formulario
+    //Creamos referencias vinculadas a los datos que recogemos del formulario
     //Identifica cada uno de los campos del formulario
     
     nombreRef=React.createRef();
@@ -40,28 +42,24 @@ class Contacto extends Component{
         console.log(this.ComentariosRef.current.value);
 
     }
+    //Mensaje de confirmación de que se han recibido los datos del formulario
     recibido=()=>{
-        alert("Hola hemos recibido tus datos correctamente, en breves nos pondremos en contacto contigo");
-    }
-      //Funciones de los eventos onChange que cambian de color el fondo de la caja cuando se aplican cambios en el input
-    cajaNombre=()=>{
-        
-        document.getElementsByName("nombre")[0].style.backgroundColor="#F3AFC9";
-    }
-    cajaEmail=()=>{
-        
-        document.getElementsByName("email")[0].style.backgroundColor="#F3AFC9";
-    }
-    cajaTelefono=()=>{
-        
-        document.getElementsByName("telefono")[0].style.backgroundColor="#F3AFC9";
-        
-    }
-    cajaComentario=()=>{
-        
-        document.getElementsByName("comentarios")[0].style.backgroundColor="#F3AFC9";
+        //Usamos la librería SweetAlert2 para las alertas
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Hola hemos recibido tus datos correctamente, en breves nos pondremos en contacto contigo',
+            showConfirmButton: false,
+            timer: 1500,
+            width: 600,
+            padding: '3em',
+            color: '#FFF7EF',
+            background: '#F3AFC9'
+        })
+
         
     }
+
     
     render(){
          //Se crea una variable user que señala al objeto
@@ -69,8 +67,10 @@ class Contacto extends Component{
             var user=this.state.user;
         }
         return(
-            <div className={styles.ContactoFondo}>
             
+            <div className={styles.ContactoFondo}>
+                
+                <div className="container-fluid">
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoNosotros}>
                     <div class="d-flex flex-row-reverse" data-aos="zoom-in"><img src={decoracion4} id={styles.decoracion4} width="110" heigth="110" className="img-fluid"></img></div>
                     <div class="d-flex justify-content-center"><h1 className={styles.tituloNosotros}>¡Contacta con nosotros!</h1></div>
@@ -81,47 +81,79 @@ class Contacto extends Component{
                 </div>
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoFormulario}>
                     <center>
-                {/*Mostrar datos del formulario
-                Se imprimen los datos del objeto user a medida 
-                que se van escribiendo en el formulario*/}
             
                 {/*Formulario con React*/}
-                {/*Eventos onChange para aplicar el foco en la siguiente caja*/}
+                
                     <form className="formulario" onSubmit={this.recibirFormulario} onChange={this.recibirFormulario}>
                         <p>
                             <label htmlFor="">Nombre&nbsp;&nbsp;&nbsp;</label>
-                            <input type="text" ref={this.nombreRef} name='nombre' onChange={this.cajaNombre} id={styles.estiloCajas}/>
+                            <input type="text" ref={this.nombreRef} name='nombre'  id={styles.estiloCajas}/>
                         </p>
                         <p>
                             <label htmlFor="">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                            <input type="email" ref={this.emailRef} name='email' onChange={this.cajaEmail} id={styles.estiloCajas}/>
+                            <input type="email" ref={this.emailRef} name='email'  id={styles.estiloCajas}/>
                         </p>
                         <p>
                             <label htmlFor="">Teléfono&nbsp;&nbsp;&nbsp;</label>
-                            <input type="text" ref={this.telefonoRef} name='telefono' onChange={this.cajaTelefono} id={styles.estiloCajas}/>
+                            <input type="text" ref={this.telefonoRef} name='telefono' id={styles.estiloCajas}/>
                         </p>
                         <p>
                             <br></br>
-                            <textarea cols="32" rows='10' ref={this.ComentariosRef} name='comentarios' onChange={this.cajaComentario} id={styles.estiloCajas}></textarea>
+                            <textarea cols="32" rows='10' ref={this.ComentariosRef} name='comentarios'  id={styles.estiloCajas}></textarea>
                         </p>
                     
-                        <input type="submit" className="text-decoration-none btn" value="Enviar" id={styles.botonTratamientos} onClick={this.recibido}/>&nbsp;&nbsp;&nbsp;
+                        <input type="submit" className="text-decoration-none btn" value="Enviar" id={styles.botonTratamientos} onClick={this.recibido} />&nbsp;&nbsp;&nbsp;
                         <input type="reset" className="text-decoration-none btn" value="Limpiar" id={styles.botonTratamientos}/>
                 </form>
                 <div className="d-flex  justify-content-center"><br></br></div>
                 <div className="d-flex  justify-content-center"><br></br></div>
+                {/*Mensaje de saludo por enviar los datos*/}
                 {this.state.user.nombre && 
                     <div id="user-data">
-                        
+                {/*Mostrar datos del formulario
+                Se imprimen el nombre de forma reactiva a medida 
+                que se va escribiendo en el formulario*/}
                         <h1>Gracias por escribirnos {user.nombre}</h1>
                         
                     </div>
                 }
                 </center>
                 
-                <div class="d-flex justify-content-center" data-aos="zoom-in"><img src={decoracion7} id={styles.decoracion7} width="150" heigth="150" className="img-fluid"></img></div>
+                <div class="d-flex justify-content-center" data-aos="zoom-in"><img src={decoracion8}  width="150" heigth="150" className="img-fluid"></img></div>
+                </div>
+                <div className="d-flex flex-row bd-highlight mb-3" id={styles.contenedorNewsletter}>
+                <div className="d-flex flex-column bd-highlight mb-3">
+                        <div className="d-flex  justify-content-center"><br></br></div>
+                        <div className="d-flex  justify-content-center"><br></br></div>
+                        <div className="d-flex  justify-content-center"><br></br></div>
+                        <div class="d-flex justify-content-center"><h1 className={styles.tituloNews}>¡Subscribete a nuestra Newsletter!&nbsp;&nbsp;&nbsp;&nbsp;</h1></div>
+                        <div className="d-flex  justify-content-center"><br></br></div>
+                        <div className="d-flex  justify-content-center"><br></br></div>
+                        
+                        <div class="d-flex justify-content-center">
+                        <form className="formulario" onSubmit={this.recibirFormulario2} onChange={this.recibirFormulario2}>
+                        <p>
+                            <label htmlFor="">Nombre&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" ref={this.nombreRef2} name='nombre2'/>
+                        </p>
+                        <p>
+                            <label htmlFor="">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="email" ref={this.emailRef2} name='email2'/>
+                        </p>
+                        <div className="d-flex  justify-content-center"><br></br></div>
+                        <div className="d-flex  justify-content-center"><br></br></div>
+                        <input type="submit" className="text-decoration-none btn" value="Enviar" id={styles.botonTratamientos} onClick={this.recibido} />&nbsp;&nbsp;&nbsp;
+                        <input type="reset" className="text-decoration-none btn" value="Limpiar" id={styles.botonTratamientos}/>
+                        </form>
+                        </div>
+                    </div>
+                    <div className="d-flex flex-column-reverse">
+                        <img src={newsletter}  width="400" heigth="400" className="img-fluid"></img>
+                    </div>
+                </div>
                 </div>
             </div>
+
             
         );
     }

@@ -21,6 +21,7 @@
     "react-scroll": "^1.8.6",
     "react-spring": "^9.4.4",
     "reactstrap": "^9.0.1",
+    "sweetalert2": "^11.4.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

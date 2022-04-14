@@ -550,35 +550,40 @@
 
 /*Estilos de Contacto */
 .ContactoFondo{
-  background-color: "#FFF7EF";
+  background-color:#FFF7EF;
 }
 #contenidoFormulario{
-  background-color: #ECDCE2;
+  background-color: #FFD9D6;
   margin:auto;
   padding: 100px;
 }
 #estiloCajas{
-  background-color: #ECDCE2;
+  background-color: #FFD9D6;
+}
+#contenedorNewsletter{
+  background-color:#FFF7EF;
+  margin: auto;
+  padding: 10px;
 }
 /*Estilos de Menú cita*/
 .menuCitaFondo{
-  background-color: "#FFF7EF";
+  background-color: #FFF7EF;
 }
 /*Estilos de modificaCita*/
 .modificaCitaFondo{
-  background-color: "#FFF7EF";
+  background-color: #FFF7EF;
 }
 /*Estilos de eliminaCita*/
 .eliminaCitaFondo{
-  background-color: "#FFF7EF";
+  background-color: #FFF7EF;
 }
 /*Estilos de pideCita*/
 .pideCitaFondo{
-  background-color: "#FFF7EF";
+  background-color: #FFF7EF;
 }
 /*Estilos de veCita*/
 .veCitaFondo{
-  background-color: "#FFF7EF";
+  background-color: #FFF7EF;
 }
 
 
