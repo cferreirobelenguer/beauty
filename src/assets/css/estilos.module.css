@@ -553,17 +553,17 @@
   background-color:#FFF7EF;
 }
 #contenidoFormulario{
-  background-color: #FFD9D6;
+  background-color: #FFECE8;
   margin:auto;
-  padding: 100px;
+  padding:70px;
 }
 #estiloCajas{
-  background-color: #FFD9D6;
+  background-color: #FFECE8;
 }
 #contenedorNewsletter{
   background-color:#FFF7EF;
   margin: auto;
-  padding: 10px;
+  padding: 50px;
 }
 /*Estilos de Menú cita*/
 .menuCitaFondo{
