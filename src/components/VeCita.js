@@ -1,9 +1,10 @@
 import React,{Component} from "react";
 import styles from '../assets/css/estilos.module.css';
 import axios from 'axios';
+import fotoPortada from '../assets/images/veCita.png';
 var nombre;
 var apellidos;
-var resultado;
+
 class VeCita extends Component{
     //Creamos referencias vinculadas a los datos que recogemos del formulario
     //Identifica cada uno de los campos del formulario
@@ -26,11 +27,12 @@ class VeCita extends Component{
     }
     //Definimos el state que va a ser el objeto que almacene los datos de la petición ajax
     state ={
+        //Defino el objeto al iniciar con un valor para que no me muestra al cargar el mensaje de que no se encuentran datos
         resultadosVeCita:[1],
         status:null,
         
     }
-    //En getClientes se realiza la petición ajax
+    //En getClientes se realiza la petición ajax para mostrar las reservas del cliente
     getClientes=()=>{
         
         axios.get('http://localhost:3900/api/ver/'+nombre+'&'+apellidos)
@@ -45,30 +47,30 @@ class VeCita extends Component{
             })
             //Console log que muestra el objeto resultado con los datos de la petición
             console.log(this.state);
-            resultado=true;
-            console.log(resultado);
+            
             
         })
         
     }
 
     render(){
-        console.log(resultado);
+        
         return(
             <section className={styles.veCitaFondo}>
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenedorNewsletter}>
-                <div class="d-flex justify-content-center" id={styles.rotuloVeCita}>
+                <div className="d-flex justify-content-center" ><img src={fotoPortada} width="1500" height="500" className="img-fluid"></img></div>
+                <div className="d-flex justify-content-center" id={styles.rotuloVeCita}>
                     <h1>Citas reservadas</h1>
                 </div>
-                <div class="d-flex justify-content-center">
+                <div className="d-flex justify-content-center">
                         <form className="formulario" onSubmit={this.recibirVeCita} onChange={this.recibirVeCita}>
-                            <div class="row g-3 align-items-center">
-                            <div class="col-auto">
+                            <div className="row g-3 align-items-center">
+                            <div className="col-auto">
                                 <label htmlFor="" class="col-form-label">Nombre&nbsp;&nbsp;&nbsp;</label>
                                 <input type="text" class="form-control" ref={this.nombreVeCita} name='nombreVeCita'/>
                             </div>
                             <div className="d-flex  justify-content-center"><br></br></div>
-                            <div class="col-auto">
+                            <div className="col-auto">
                                 <label htmlFor="" class="col-form-label">Apellidos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                                 <input type="text" class="form-control" ref={this.apellidosVeCita} name='apellidosVeCita'/>
                             </div>
@@ -80,27 +82,30 @@ class VeCita extends Component{
                         </form>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center" id={styles.contenidoBusqueda}>
+                <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoBusqueda}>
                 
                 {
                     
                     this.state.resultadosVeCita.map((citas)=>{
-                    
+                    /*Se muestran los datos de la petición*/
                     return(
-                        <div>
-                            
+                        
+                        <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoCitas}>
                             <h4>{citas.nombre}</h4>
                             <h4>{citas.apellidos}</h4>
                             <h4>{citas.tratamiento}</h4>
                             <h4>{citas.fecha}</h4>
-                            <h4>{citas.hora}</h4>
-                            
+                            <h4>{citas.hora}</h4>&nbsp;&nbsp;
+                            <div className="d-flex  justify-content-center"><br></br></div>
                         </div>
+                        
                     );
                     
                     })}
                     
-                    {  this.state.resultadosVeCita<=0? <h4>No se han encontrado resultados</h4>:"" }
+                    {  
+                    /*En caso de que el objeto de la petición sea igual a 0 se muestra mensaje de que no se encuentran resultados*/
+                    this.state.resultadosVeCita<=0? <h4>No se han encontrado resultados</h4>:"" }
                 
                 
                 </div>

@@ -602,6 +602,20 @@
   margin: auto;
   padding-bottom: 100px;
 }
-
+#contenidoCitas{
+  background-color: #FFF7EF;
+  padding:50px;
+  text-align: center;
+  font-family: 'Ovo', serif;
+  font-size: 3vw;
+  color: #323C3D;
+}
+#contenidoNombre{
+  padding:20px;
+  text-align: center;
+  font-family: 'Ovo', serif;
+  font-size: 3vw;
+  color: #323C3D;
+}
 
 
