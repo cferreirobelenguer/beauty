@@ -585,5 +585,12 @@
 .veCitaFondo{
   background-color: #FFF7EF;
 }
+#rotuloVeCita{
+  font-family: 'Ovo', serif;
+  font-size: 2.5vw;
+  color: #323C3D;
+  margin: auto;
+  padding-bottom: 20px;
+}
 
 
