@@ -592,5 +592,16 @@
   margin: auto;
   padding-bottom: 20px;
 }
+#contenidoBusqueda{
+  background-color: #FFF7EF;
+  margin: auto;
+  text-align: center;
+  font-family: 'Ovo', serif;
+  font-size: 4vw;
+  color: #323C3D;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
 
 

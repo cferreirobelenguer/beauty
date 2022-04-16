@@ -3,6 +3,7 @@ import styles from '../assets/css/estilos.module.css';
 import axios from 'axios';
 var nombre;
 var apellidos;
+var resultado;
 class VeCita extends Component{
     //Creamos referencias vinculadas a los datos que recogemos del formulario
     //Identifica cada uno de los campos del formulario
@@ -25,11 +26,13 @@ class VeCita extends Component{
     }
     //Definimos el state que va a ser el objeto que almacene los datos de la petición ajax
     state ={
-        resultadosVeCita:[],
-        status:null
+        resultadosVeCita:[1],
+        status:null,
+        
     }
     //En getClientes se realiza la petición ajax
     getClientes=()=>{
+        
         axios.get('http://localhost:3900/api/ver/'+nombre+'&'+apellidos)
         //Se realiza la promesa
         .then(res=>{
@@ -38,14 +41,19 @@ class VeCita extends Component{
                 resultadosVeCita:res.data.resultados2,
                 //Estado sucess para indicar que la petición se ha realizado correctamente
                 status:"sucess"
+                
             })
             //Console log que muestra el objeto resultado con los datos de la petición
             console.log(this.state);
+            resultado=true;
+            console.log(resultado);
+            
         })
+        
     }
 
     render(){
-        
+        console.log(resultado);
         return(
             <section className={styles.veCitaFondo}>
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenedorNewsletter}>
@@ -71,6 +79,30 @@ class VeCita extends Component{
                             <input type="reset" className="btn text-decoration-none btn" value="Limpiar" id={styles.botonTratamientos}/>
                         </form>
                     </div>
+                </div>
+                <div class="d-flex justify-content-center" id={styles.contenidoBusqueda}>
+                
+                {
+                    
+                    this.state.resultadosVeCita.map((citas)=>{
+                    
+                    return(
+                        <div>
+                            
+                            <h4>{citas.nombre}</h4>
+                            <h4>{citas.apellidos}</h4>
+                            <h4>{citas.tratamiento}</h4>
+                            <h4>{citas.fecha}</h4>
+                            <h4>{citas.hora}</h4>
+                            
+                        </div>
+                    );
+                    
+                    })}
+                    
+                    {  this.state.resultadosVeCita<=0? <h4>No se han encontrado resultados</h4>:"" }
+                
+                
                 </div>
             </section>
         );

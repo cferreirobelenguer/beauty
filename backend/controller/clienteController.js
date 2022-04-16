@@ -211,12 +211,7 @@ var controller={
                     message:'Error en la petición'
                 });
             }
-            if(resultados2==""){
-                return res.status(404).send({
-                    status:'error',
-                    message:'No hay resultados en la búsqueda'
-                });
-            }
+            
             return res.status(200).send({
                 status:'success',
                 resultados2
