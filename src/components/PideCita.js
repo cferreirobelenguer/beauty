@@ -5,12 +5,13 @@ import { Link } from 'react-router-dom';
 import {Redirect} from 'react-router-dom';
 import Select from 'react-select'
 //Variables que van a recoger los datos del formulario
-var nombre;
-var apellidos;
-var fecha;
-var hora;
+var nombre2;
+var apellidos2;
+var fecha2;
+var hora2;
 var servicio;
-var cita;
+
+
 
 
 const  tratamiento= [
@@ -25,6 +26,11 @@ class PideCita extends Component{
     state = {
         tratamientoTotal: null
     };
+    state = {
+        cita: null
+    };
+    
+    
     
     handleChange = tratamientoTotal => {
         this.setState({ tratamientoTotal });
@@ -46,41 +52,56 @@ class PideCita extends Component{
         e.preventDefault();
 
         
-        nombre=this.nombreRef.current.value;
-        apellidos=this.apellidosRef.current.value
-        fecha=this.fechaRef.current.value;
-        hora=this.horaRef.current.value;
+        nombre2=this.nombreRef.current.value;
+        apellidos2=this.apellidosRef.current.value
+        fecha2=this.fechaRef.current.value;
+        hora2=this.horaRef.current.value;
         //Se recogen los datos del input radio
     
-        console.log(nombre);
-        console.log(apellidos);
-        console.log(fecha);
-        console.log(hora);
+        console.log(nombre2);
+        console.log(apellidos2);
+        console.log(fecha2);
+        console.log(hora2);
         console.log(servicio);
+        this.changeState();
         
 
     }
-    /*
-    ESTO HAY QUE REVISARLO PORQUE NO FUNCIONA
-    LA RECOGIDA DE DATOS DEL FORMULARIO ESTÁ CORRECTA PERO LA PETICIÓN NO FUNCIONA POR LOS PARÁMETROS
-    cita={
-        nombre:this.nombreRef.current.value,
-        apellidos:this.apellidosRef.current.value,
-        tratamientos:servicio,
-        fecha:this.fechaRef.current.value,
-        hora:this.horaRef.current.value
-    };
     
-    state = {
-        cita: cita
-    };
+    changeState=()=>{
+        this.setState({
+            cita:{
+                nombre:nombre2,
+                apellidos:apellidos2,
+                tratamientos:servicio,
+                fecha:fecha2,
+                hora:hora2
+            }
+        })
+    }
+    /*ESTO HAY QUE REVISARLO PORQUE NO FUNCIONA
+    LA RECOGIDA DE DATOS DEL FORMULARIO ESTÁ CORRECTA PERO LA PETICIÓN NO FUNCIONA POR LOS PARÁMETROS
+    EL OBJETO ESTÁ BIEN PERO SIGUE SIN FUNCIONAR LA PETICIÓN*/
+    
+    
     //Petición http por post para guardar el artículo
     reservarCita=()=>{
         axios.post('http://localhost:3900/api/save',this.state.cita)
         .then(res=>{
-            console.log(res.data.cita);
+            console.log(res.data);
+            console.log(this.state.cita);
+            if(res.data.cita){
+                this.setState({
+                    cita:res.data.cita,
+                    status:'sucess'
+                })
+            }else{
+                this.setState({
+                    status:'failed'
+                })
+            }
         })
-    }*/
+    }
     
     render(){
         
