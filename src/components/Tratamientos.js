@@ -75,7 +75,7 @@ class Tratamientos extends Component{
                     
                     <div className="d-flex  justify-content-center" id={styles.higienePeeling}>
                         <div class="mt-4 p-5  text-dark rounded">
-                            <h1>Limpieza Hydral Infusión</h1>
+                            <h1>Peeling</h1>
                             <div className={styles.peeling2}>
                             <div class="d-flex justify-content-center">
                                     <details>

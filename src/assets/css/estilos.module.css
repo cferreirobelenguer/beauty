@@ -585,6 +585,9 @@
 /*Estilos de pideCita*/
 .pideCitaFondo{
   background-color: #FFF7EF;
+  text-align: center;
+  padding: 150px;
+  margin: auto;
 }
 /*Estilos de veCita*/
 .veCitaFondo{

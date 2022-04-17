@@ -64,16 +64,16 @@ class VeCita extends Component{
                     <h1>Citas reservadas</h1>
                 </div>
                 <div className="d-flex justify-content-center">
-                        <form className="formulario" onSubmit={this.recibirVeCita} onChange={this.recibirVeCita}>
+                        <form className="mid-form" onSubmit={this.recibirVeCita} onChange={this.recibirVeCita}>
                             <div className="row g-3 align-items-center">
                             <div className="col-auto">
                                 <label htmlFor="" class="col-form-label">Nombre&nbsp;&nbsp;&nbsp;</label>
-                                <input type="text" class="form-control" ref={this.nombreVeCita} name='nombreVeCita'/>
+                                <input type="text" class="form-control" ref={this.nombreVeCita} name='nombreVeCita' required="required"/>
                             </div>
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="col-auto">
                                 <label htmlFor="" class="col-form-label">Apellidos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                                <input type="text" class="form-control" ref={this.apellidosVeCita} name='apellidosVeCita'/>
+                                <input type="text" class="form-control" ref={this.apellidosVeCita} name='apellidosVeCita' required="required"/>
                             </div>
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="d-flex  justify-content-center"><br></br></div>

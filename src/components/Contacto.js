@@ -85,28 +85,28 @@ class Contacto extends Component{
             
                 {/*Formulario con React*/}
                 
-                    <form className="formulario" onSubmit={this.recibirFormulario} onChange={this.recibirFormulario}>
+                    <form className="mid-form" onSubmit={this.recibirFormulario} onChange={this.recibirFormulario}>
                     <div className="row g-3 align-items-center">
                         <div className="col-auto">
                             <label htmlFor=""  className="col-form-label">Nombre&nbsp;&nbsp;&nbsp;</label>
-                            <input type="text" className="form-control" ref={this.nombreRef} name='nombre'  id={styles.estiloCajas}/>
+                            <input type="text" className="form-control" ref={this.nombreRef} name='nombre'  id={styles.estiloCajas} required="required"/>
                         </div> 
                         <div className="d-flex justify-content-center"><br></br></div>
                         <div className="col-auto">
                             <label htmlFor="" className="col-form-label">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                         
-                            <input type="email" className="form-control" ref={this.emailRef} name='email'  id={styles.estiloCajas}/>
+                            <input type="email" className="form-control" ref={this.emailRef} name='email'  id={styles.estiloCajas} required="required"/>
                         </div>
                         <div className="d-flex justify-content-center"><br></br></div>
                         <div className="col-auto">
                             <label htmlFor="" class="col-form-label">Teléfono&nbsp;&nbsp;&nbsp;</label>
                         
-                            <input type="text" className="form-control" ref={this.telefonoRef} name='telefono' id={styles.estiloCajas}/>
+                            <input type="text" className="form-control" ref={this.telefonoRef} name='telefono' id={styles.estiloCajas} required="required"/>
                         </div>
                         <div className="d-flex justify-content-center"><br></br></div>
                         <div className="mb-3">
                             
-                            <textarea className="form-control" cols="215" rows='10' ref={this.ComentariosRef} name='comentarios'  id={styles.estiloCajas}></textarea>
+                            <textarea className="form-control" cols="215" rows='10' ref={this.ComentariosRef} name='comentarios'  id={styles.estiloCajas} required="required"></textarea>
                         </div>
                     </div>
                         <input type="submit" className="btn text-decoration-none btn" value="Enviar" id={styles.botonTratamientos} onClick={this.recibido} />&nbsp;&nbsp;&nbsp;
@@ -139,16 +139,16 @@ class Contacto extends Component{
                         <div className="d-flex  justify-content-center"><br></br></div>
                         
                         <div class="d-flex justify-content-center">
-                        <form className="formulario" onSubmit={this.recibirFormulario2} onChange={this.recibirFormulario2}>
+                        <form className="mid-form" onSubmit={this.recibirFormulario2} onChange={this.recibirFormulario2}>
                             <div class="row g-3 align-items-center">
                             <div class="col-auto">
                                 <label htmlFor="" class="col-form-label">Nombre&nbsp;&nbsp;&nbsp;</label>
-                                <input type="text" class="form-control" ref={this.nombreRef2} name='nombre2'/>
+                                <input type="text" class="form-control" ref={this.nombreRef2} name='nombre2' required="required"/>
                             </div>
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div class="col-auto">
                                 <label htmlFor="" class="col-form-label">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                                <input type="email" class="form-control" ref={this.emailRef2} name='email2'/>
+                                <input type="email" class="form-control" ref={this.emailRef2} name='email2' required="required"/>
                             </div>
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="d-flex  justify-content-center"><br></br></div>
