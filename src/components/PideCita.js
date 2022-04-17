@@ -86,10 +86,16 @@ class PideCita extends Component{
     
     //Petición http por post para guardar el artículo
     reservarCita=()=>{
-        axios.post('http://localhost:3900/api/save',this.state.cita)
+        axios.post('http://localhost:3900/api/save/',{
+            nombre:nombre2,
+            apellidos:apellidos2,
+            tratamiento:servicio,
+            fecha:fecha2,
+            hora:hora2
+        })
         .then(res=>{
             console.log(res.data);
-            console.log(this.state.cita);
+            
             if(res.data.cita){
                 this.setState({
                     cita:res.data.cita,
