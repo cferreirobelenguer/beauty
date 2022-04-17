@@ -569,6 +569,11 @@
 .menuCitaFondo{
   background-color: #FFF7EF;
 }
+.menuOpciones{
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+}
 /*Estilos de modificaCita*/
 .modificaCitaFondo{
   background-color: #FFF7EF;
@@ -600,7 +605,7 @@
   font-size: 4vw;
   color: #323C3D;
   margin: auto;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
 }
 #contenidoCitas{
   background-color: #FFF7EF;

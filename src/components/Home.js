@@ -5,7 +5,7 @@ import decoracion2 from '../assets/images/decoracion2.png';
 import decoracion3 from '../assets/images/decoracion3.png';
 import styles from '../assets/css/estilos.module.css';
 import { Link } from 'react-router-dom';
-import Button from '@mui/material/Button';
+
 
 class Home extends Component{
     //Página de home con enlace directo a tratamientos y carrusel de novedades
@@ -45,7 +45,7 @@ class Home extends Component{
                                 <div class="mt-4 p-5  text-dark rounded">
                                     <h1 className={styles.letraTitulo}>&nbsp;&nbsp;Déjate mimar</h1>
                                     <h3 className={styles.letraDescubreTratamientos}>&nbsp;&nbsp;Descubre nuestros tratamientos</h3>
-                                    <Button class="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/Tratamientos" className="text-decoration-none text-light" >Tratamientos</Link></Button>
+                                    <button className="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/Tratamientos" className="text-decoration-none text-light" >Tratamientos</Link></button>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +66,7 @@ class Home extends Component{
                         <div className="d-flex  justify-content-center" data-aos="fade-down"><h3 className={styles.letraPrimavera}>¡Pon a punto tu piel para la primavera!</h3></div>
                         <div className="d-flex  justify-content-center"><br></br></div>
                         <div className="d-flex  justify-content-center" data-aos="zoom-in">
-                        <Button className="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/menuCita" className="text-decoration-none text-light" >Pide cita</Link></Button>
+                        <button className="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/menuCita" className="text-decoration-none text-light" >Pide cita</Link></button>
                         </div>
                         <div className="d-flex justify-content-right" data-aos="zoom-in"><img id={styles.fotoDecoracion} src={decoracion3} width="250" height="250" className="img-fluid" alt="fotoEstrellas"/></div>
     </div>

@@ -2,6 +2,7 @@ import React,{Component} from "react";
 import styles from '../assets/css/estilos.module.css';
 import axios from 'axios';
 import fotoPortada from '../assets/images/veCita.png';
+import { Link } from 'react-router-dom';
 var nombre;
 var apellidos;
 
@@ -96,7 +97,7 @@ class VeCita extends Component{
                             <h4>{citas.tratamiento}</h4>
                             <h4>{citas.fecha}</h4>
                             <h4>{citas.hora}</h4>&nbsp;&nbsp;
-                            <div className="d-flex  justify-content-center"><br></br></div>
+                            
                         </div>
                         
                     );
@@ -106,7 +107,11 @@ class VeCita extends Component{
                     {  
                     /*En caso de que el objeto de la petición sea igual a 0 se muestra mensaje de que no se encuentran resultados*/
                     this.state.resultadosVeCita<=0? <h4>No se han encontrado resultados</h4>:"" }
-                
+                    <section className={styles.menuOpciones}>
+                        <button className="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/menuCita" className="text-decoration-none text-light" >Menú de citas</Link></button>
+                        <div className="d-flex justify-content-center"><br></br></div>
+                        <div className="d-flex justify-content-center"><br></br></div>
+                    </section>
                 
                 </div>
             </section>
