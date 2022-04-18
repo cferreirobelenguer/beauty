@@ -98,7 +98,7 @@ var controller={
                     });
                 }else{
                     //En caso de que se encuentren resultados no se puede efectuar la reserva porque la clienta ya tiene una reserva ese dia a esa hora
-                    return res.status(404).send({
+                    return res.status(200).send({
                         status:'error',
                         message:'No podemos procesar su solicitud, ya existe un servicio reservado en la fecha y hora solicitada '
                     });

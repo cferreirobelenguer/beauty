@@ -1,8 +1,8 @@
 import React,{Component} from "react";
 import styles from '../assets/css/estilos.module.css';
 import axios from 'axios';
+import pidetucita from '../assets/images/pidetucita.png';
 import { Link } from 'react-router-dom';
-import {Redirect} from 'react-router-dom';
 import Select from 'react-select'
 //Variables que van a recoger los datos del formulario
 var nombre2;
@@ -10,6 +10,7 @@ var apellidos2;
 var fecha2;
 var hora2;
 var servicio;
+var contenido="";
 
 
 
@@ -26,12 +27,15 @@ class PideCita extends Component{
     state = {
         tratamientoTotal: null
     };
-    state = {
-        cita: null
-    };
     
-    
-    
+    state ={
+        //Objeto que va a recoger los datos del res
+        resultadosPideCita:[],
+        status:null,
+        contenido:""
+        
+    }
+    //Se meten los datos del select en un objeto
     handleChange = tratamientoTotal => {
         this.setState({ tratamientoTotal });
         servicio=tratamientoTotal.value;
@@ -56,36 +60,24 @@ class PideCita extends Component{
         apellidos2=this.apellidosRef.current.value
         fecha2=this.fechaRef.current.value;
         hora2=this.horaRef.current.value;
-        //Se recogen los datos del input radio
-    
+        
+        //Debug de los datos del formulario
         console.log(nombre2);
         console.log(apellidos2);
         console.log(fecha2);
         console.log(hora2);
         console.log(servicio);
-        this.changeState();
-        
+    
 
     }
     
-    changeState=()=>{
-        this.setState({
-            cita:{
-                nombre:nombre2,
-                apellidos:apellidos2,
-                tratamientos:servicio,
-                fecha:fecha2,
-                hora:hora2
-            }
-        })
-    }
-    /*ESTO HAY QUE REVISARLO PORQUE NO FUNCIONA
-    LA RECOGIDA DE DATOS DEL FORMULARIO ESTÁ CORRECTA PERO LA PETICIÓN NO FUNCIONA POR LOS PARÁMETROS
-    EL OBJETO ESTÁ BIEN PERO SIGUE SIN FUNCIONAR LA PETICIÓN*/
+
+    /*FUNCIONA TODO PERO HAY QUE VALIDAR FORMULARIO, ES LO QUE QUEDA PENDIENTE YA DE ESTA VISTA Y HACER EL FRONT*/
     
     
     //Petición http por post para guardar el artículo
     reservarCita=()=>{
+        contenido="";
         axios.post('http://localhost:3900/api/save/',{
             nombre:nombre2,
             apellidos:apellidos2,
@@ -94,30 +86,36 @@ class PideCita extends Component{
             hora:hora2
         })
         .then(res=>{
-            console.log(res.data);
             
-            if(res.data.cita){
-                this.setState({
-                    cita:res.data.cita,
-                    status:'sucess'
-                })
-            }else{
-                this.setState({
-                    status:'failed'
-                })
-            }
+            //Se recogen los datos de la petición en resultadosPideCita y status
+            this.setState({
+                resultadosPideCita:res.data.datosCliente,
+                //Estado sucess para indicar que la petición se ha realizado correctamente
+                status:res.data.status,
+                contenido:""
+                
+            })
+            //Debug del objeto de la petición
+            console.log(this.state.resultadosPideCita);
+            console.log(this.state.status);
+            
         })
+        
     }
     
     render(){
         
         return(
             <div className={styles.pideCitaFondo}>
-                <section id={styles.rotuloVeCita}>
-                    <center>
-                    <h1>Pedir cita</h1>
-                    <div className="d-flex  justify-content-center"><br></br></div>
-                    <div className="d-flex  justify-content-center"><br></br></div>
+                <center>
+                    <img src={pidetucita} width="1500" height="1000" className="img-fluid"></img>
+                </center>
+                
+                <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenedorNewsletter}>
+                
+                <div className="d-flex justify-content-center" id={styles.rotuloVeCita}>
+                    <h1>Aquí puedes hacer tus reservas</h1>
+                </div>
                     <div className="d-flex justify-content-center">
                         <form className="mid-form" onSubmit={this.recibirPedirCita} onChange={this.recibirPedirCita}>
                             <div className="row g-3 align-items-center">
@@ -166,13 +164,24 @@ class PideCita extends Component{
                             <input type="reset" className="btn text-decoration-none btn" value="Limpiar" id={styles.botonTratamientos}/>
                         </form>
                     </div>
-                    </center>
-                </section>
+                </div>
                 <section className={styles.menuOpciones}>
+                <div className="d-flex justify-content-center" >
                         <button className="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/menuCita" className="text-decoration-none text-light" >Menú de citas</Link></button>
                         <div className="d-flex justify-content-center"><br></br></div>
                         <div className="d-flex justify-content-center"><br></br></div>
-                    </section>
+                </div>
+                </section>
+                <section id={styles.contenidoCitas}>
+                <div className="d-flex justify-content-center">
+            
+                {  
+                    this.state.status=='error'? <h4>No hemos podido procesar su solicitud</h4>:contenido="Hemos procesado su solicitud"}
+                <h4>{console.log(contenido)}</h4>
+                </div>
+
+                
+                </section>
             </div>
         );
     }

@@ -84,25 +84,30 @@ class VeCita extends Component{
                     </div>
                 </div>
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoBusqueda}>
-                
-                {
-                    
-                    this.state.resultadosVeCita.map((citas)=>{
-                    /*Se muestran los datos de la petición*/
-                    return(
-                        
-                        <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoCitas}>
-                            <h4>{citas.nombre}</h4>
-                            <h4>{citas.apellidos}</h4>
-                            <h4>{citas.tratamiento}</h4>
-                            <h4>{citas.fecha}</h4>
-                            <h4>{citas.hora}</h4>&nbsp;&nbsp;
+                {  
+                    /*En caso de que el objeto de la petición sea mayor a 1 de longitud se muestran datos*/
+                    this.state.resultadosVeCita.length>1? this.state.resultadosVeCita.map((citas)=>{
+                        /*Se muestran los datos de la petición*/
+                        return(
                             
-                        </div>
+                            <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoCitas}>
+                                <h4>Tu id de reserva es: {citas._id}</h4>
+                                <h4>El id vas a necesitarlo para modificar o eliminar citas</h4>
+                                <h4>Estos son los datos de tu cita: </h4>
+                                <h4>Nombre: {citas.nombre}</h4>
+                                <h4>Apellidos: {citas.apellidos}</h4>
+                                <h4>Tratamiento: {citas.tratamiento}</h4>
+                                <h4>Fecha: {citas.fecha}</h4>
+                                <h4>Hora: {citas.hora}</h4>&nbsp;&nbsp;
+                                
+                            </div>
+                            
+                        );
                         
-                    );
-                    
-                    })}
+                        }) :"" }
+
+            
+                
                     
                     {  
                     /*En caso de que el objeto de la petición sea igual a 0 se muestra mensaje de que no se encuentran resultados*/
