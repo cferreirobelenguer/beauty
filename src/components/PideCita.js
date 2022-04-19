@@ -30,9 +30,9 @@ class PideCita extends Component{
     
     state ={
         //Objeto que va a recoger los datos del res
-        resultadosPideCita:[],
+        resultadosPideCita:[1],
         status:null,
-        contenido:""
+        
         
     }
     //Se meten los datos del select en un objeto
@@ -106,12 +106,13 @@ class PideCita extends Component{
     render(){
         
         return(
-            <div className={styles.pideCitaFondo}>
+            
+            <div>
                 <center>
                     <img src={pidetucita} width="1500" height="1000" className="img-fluid"></img>
                 </center>
                 
-                <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenedorNewsletter}>
+                <div className="d-flex flex-column bd-highlight mb-3" id={styles.pideCitaFondo}>
                 
                 <div className="d-flex justify-content-center" id={styles.rotuloVeCita}>
                     <h1>Aquí puedes hacer tus reservas</h1>
@@ -164,24 +165,43 @@ class PideCita extends Component{
                             <input type="reset" className="btn text-decoration-none btn" value="Limpiar" id={styles.botonTratamientos}/>
                         </form>
                     </div>
-                </div>
-                <section className={styles.menuOpciones}>
-                <div className="d-flex justify-content-center" >
-                        <button className="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/menuCita" className="text-decoration-none text-light" >Menú de citas</Link></button>
-                        <div className="d-flex justify-content-center"><br></br></div>
-                        <div className="d-flex justify-content-center"><br></br></div>
-                </div>
-                </section>
+                
+                <div className="d-flex justify-content-center"><br></br></div>
                 <section id={styles.contenidoCitas}>
                 <div className="d-flex justify-content-center">
             
-                {  
-                    this.state.status=='error'? <h4>No hemos podido procesar su solicitud</h4>:contenido="Hemos procesado su solicitud"}
-                <h4>{console.log(contenido)}</h4>
+                
+                <div >
+                {/*En caso de que el status sea error que me muestre error en la reserva, si es sucess que la reserva se ha efectuado y si es null que no me
+                muestre nada porque es la primera vista inicial de la web*/
+                    (() => {
+                        if (this.state.status=='error')
+                            return <h4>No hemos podido realizar la reserva</h4>
+                        if (this.state.status=='success')
+                            return <div><h4>Su reserva ha sido efectuada<br></br>Puede ver su reserva en:
+                            <br></br><br></br><button className="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/VeCita" className="text-decoration-none text-light" >Puedes ver tu cita aquí<br></br></Link></button>
+                        </h4></div>
+                        else
+                            return ""
+                    })()
+}
+</div>
                 </div>
 
                 
                 </section>
+                        <div className="d-flex justify-content-center"><br></br></div>
+                <div className="d-flex justify-content-center" >
+                        
+                        <button className="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/menuCita" className="text-decoration-none text-light" >Menú de citas</Link></button>
+                        
+                </div>
+                <div className="d-flex justify-content-center"><br></br></div>
+                        <div className="d-flex justify-content-center"><br></br></div>
+                        <div className="d-flex justify-content-center"><br></br></div>
+                        <div className="d-flex justify-content-center"><br></br></div>
+                </div>
+                
             </div>
         );
     }

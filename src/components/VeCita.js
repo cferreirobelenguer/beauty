@@ -29,7 +29,7 @@ class VeCita extends Component{
     //Definimos el state que va a ser el objeto que almacene los datos de la petición ajax
     state ={
         //Defino el objeto al iniciar con un valor para que no me muestra al cargar el mensaje de que no se encuentran datos
-        resultadosVeCita:[1],
+        resultadosVeCita:[],
         status:null,
         
     }
@@ -85,8 +85,8 @@ class VeCita extends Component{
                 </div>
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoBusqueda}>
                 {  
-                    /*En caso de que el objeto de la petición sea mayor a 1 de longitud se muestran datos*/
-                    this.state.resultadosVeCita.length>1? this.state.resultadosVeCita.map((citas)=>{
+                    /*En caso de que el objeto de la petición sea mayor o igual 1 de longitud se muestran datos*/
+                    this.state.resultadosVeCita.length>=1? this.state.resultadosVeCita.map((citas)=>{
                         /*Se muestran los datos de la petición*/
                         return(
                             
@@ -106,12 +106,19 @@ class VeCita extends Component{
                         
                         }) :"" }
 
+                    {/*Con esto le digo que si el status es null pero el objeto resultadosVeCita es igual a 0 que no me muestra nada porque es la vista principal
+                    y si no es null significa que hay una respuesta a la API con lo cual es success y si resultadosVeCita es igual a 0 que me muestre que no se han 
+                    encontrado resultados*/
+                    (() => {
+                        if (this.state.status==null)
+                            return ""
+                        else 
+                            if(this.state.resultadosVeCita==0)
+                            return <h4>No se han encontrado resultados</h4>
+                    })()
+                }
             
                 
-                    
-                    {  
-                    /*En caso de que el objeto de la petición sea igual a 0 se muestra mensaje de que no se encuentran resultados*/
-                    this.state.resultadosVeCita<=0? <h4>No se han encontrado resultados</h4>:"" }
                     <section className={styles.menuOpciones}>
                         <button className="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/menuCita" className="text-decoration-none text-light" >Menú de citas</Link></button>
                         <div className="d-flex justify-content-center"><br></br></div>

@@ -583,11 +583,15 @@
   background-color: #FFF7EF;
 }
 /*Estilos de pideCita*/
-.pideCitaFondo{
+#pideCitaFondo{
   background-color: #FFF7EF;
   text-align: center;
   padding: 150px;
   margin: auto;
+  font-family: 'Ovo', serif;
+  font-size: 2.5vw;
+  color: #323C3D;
+  padding-bottom: 20px;
 }
 /*Estilos de veCita*/
 .veCitaFondo{
