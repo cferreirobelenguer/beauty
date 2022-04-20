@@ -168,15 +168,15 @@ var controller={
         //Find and delete
         cliente.findOneAndDelete({_id:clienteId}, (err,clienteRemove)=>{
             if(err){
-                //Error en servidor
-                return res.status(500).send({
+                //Error
+                return res.status(200).send({
                     status:'error',
                     message:'Error al borrar'
                 });
             }
                 if(!clienteRemove){
                     //Error en borrado
-                    return res.status(404).send({
+                    return res.status(200).send({
                         status:'error',
                         message:'No se ha podido borrar'
                     });

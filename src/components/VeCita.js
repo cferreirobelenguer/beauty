@@ -57,11 +57,15 @@ class VeCita extends Component{
     render(){
         
         return(
-            <section className={styles.veCitaFondo}>
-                <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenedorNewsletter}>
-                <div className="d-flex justify-content-center" ><img src={fotoPortada} width="1500" height="500" className="img-fluid"></img></div>
+            <div>
+                <center>
+                    <img src={fotoPortada} width="1500" height="1000" className="img-fluid"></img>
+                </center>
+                
+                <div className="d-flex flex-column bd-highlight mb-3" id={styles.pideCitaFondo}>
+                
                 <div className="d-flex justify-content-center" id={styles.rotuloVeCita}>
-                    <h1>Citas reservadas</h1>
+                    <h1>Aquí puedes ver tus reservas</h1>
                 </div>
                 <div className="d-flex justify-content-center">
                         <form className="mid-form" onSubmit={this.recibirVeCita} onChange={this.recibirVeCita}>
@@ -91,7 +95,7 @@ class VeCita extends Component{
                         return(
                             
                             <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoCitas}>
-                                <h4>Tu id de reserva es: {citas._id}</h4>
+                                <h4>Tu número de reserva es: {citas._id}</h4>
                                 <h4>El id vas a necesitarlo para modificar o eliminar citas</h4>
                                 <h4>Estos son los datos de tu cita: </h4>
                                 <h4>Nombre: {citas.nombre}</h4>
@@ -126,7 +130,7 @@ class VeCita extends Component{
                     </section>
                 
                 </div>
-            </section>
+            </div>
         );
     }
 }

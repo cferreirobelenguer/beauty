@@ -10,11 +10,7 @@ var apellidos2;
 var fecha2;
 var hora2;
 var servicio;
-var contenido="";
-
-
-
-
+//Datos del select
 const  tratamiento= [
     { value: "higiene", label: "Higiene" },
     { value: "limpieza", label: "Limpieza" },
@@ -77,7 +73,7 @@ class PideCita extends Component{
     
     //Petición http por post para guardar el artículo
     reservarCita=()=>{
-        contenido="";
+        
         axios.post('http://localhost:3900/api/save/',{
             nombre:nombre2,
             apellidos:apellidos2,
@@ -92,7 +88,7 @@ class PideCita extends Component{
                 resultadosPideCita:res.data.datosCliente,
                 //Estado sucess para indicar que la petición se ha realizado correctamente
                 status:res.data.status,
-                contenido:""
+                
                 
             })
             //Debug del objeto de la petición
@@ -178,7 +174,7 @@ class PideCita extends Component{
                         if (this.state.status=='error')
                             return <h4>No hemos podido realizar la reserva</h4>
                         if (this.state.status=='success')
-                            return <div><h4>Su reserva ha sido efectuada<br></br>Puede ver su reserva en:
+                            return <div><h4>Su reserva ha sido efectuada<br></br> Puede ver su reserva en:
                             <br></br><br></br><button className="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/VeCita" className="text-decoration-none text-light" >Puedes ver tu cita aquí<br></br></Link></button>
                         </h4></div>
                         else
