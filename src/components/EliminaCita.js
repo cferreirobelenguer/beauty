@@ -95,9 +95,9 @@ class EliminaCita extends Component{
                 muestre nada porque es la primera vista inicial de la web*/
                     (() => {
                         if (this.state.status=='error')
-                            return <h4>La reserva que intenta eliminar no existe</h4>
+                            return <h4>La reserva que intentas eliminar no existe</h4>
                         if (this.state.status=='success')
-                            return <div><h4>Su reserva ha sido eliminada<br></br> Puede ver sus reservas en:
+                            return <div><h4>Tu reserva ha sido eliminada<br></br> Puedes ver tus reservas en:
                             <br></br><br></br><button className="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/VeCita" className="text-decoration-none text-light" >Puedes ver tus citas aquí<br></br></Link></button>
                         </h4></div>
                         else

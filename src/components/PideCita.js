@@ -71,7 +71,7 @@ class PideCita extends Component{
     /*FUNCIONA TODO PERO HAY QUE VALIDAR FORMULARIO, ES LO QUE QUEDA PENDIENTE YA DE ESTA VISTA Y HACER EL FRONT*/
     
     
-    //Petición http por post para guardar el artículo
+    //Petición http por post para guardar la reserva
     reservarCita=()=>{
         
         axios.post('http://localhost:3900/api/save/',{

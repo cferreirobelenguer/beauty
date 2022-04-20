@@ -1,8 +1,9 @@
 import React,{Component} from "react";
 import portadaHome from '../assets/images/portadaHome.jpg';
-import decoracion from '../assets/images/decoracion.png';
+
 import decoracion2 from '../assets/images/decoracion2.png';
 import decoracion3 from '../assets/images/decoracion3.png';
+import twitterPortada from '../assets/images/twitterPortada.png';
 import styles from '../assets/css/estilos.module.css';
 import { Link } from 'react-router-dom';
 
@@ -67,8 +68,14 @@ class Home extends Component{
                         <div className="d-flex  justify-content-center"><br></br></div>
                         <div className="d-flex  justify-content-center" data-aos="zoom-in">
                         <button className="text-decoration-none btn" id={styles.botonTratamientos}><Link to="/menuCita" className="text-decoration-none text-light" >Pide cita</Link></button>
-                        </div>
-                        <div className="d-flex justify-content-right" data-aos="zoom-in"><img id={styles.fotoDecoracion} src={decoracion3} width="250" height="250" className="img-fluid" alt="fotoEstrellas"/></div>
+                        
+                </div>
+                        <div className="d-flex  justify-content-center"><br></br></div>
+                        <div className="d-flex  justify-content-center"><br></br></div>
+                        <div className="d-flex  justify-content-center"><br></br></div>
+                        <div className="d-flex  justify-content-center"><br></br></div>
+                        <a href="https://twitter.com/beautycenterBot"><div className="d-flex  justify-content-center" data-aos="zoom-in"><img id={styles.fotoTwitter} src={twitterPortada} width="1000" height="500" className="img-fluid" alt="twitter"/></div>
+                        <div className="d-flex justify-content-right" data-aos="zoom-in"><img id={styles.fotoDecoracion} src={decoracion3} width="250" height="250" className="img-fluid" alt="fotoEstrellas"/></div></a>
     </div>
 </div>
             );

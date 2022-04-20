@@ -298,7 +298,7 @@ var controller={
         cliente.findOneAndUpdate({_id: clienteId},params,{new:true},(err,clienteUpdate)=>{
             if(err){
                //Error de servidor
-                return res.status(500).send({
+                return res.status(200).send({
                     status:'error',
                     message:'Error en servidor'
                 });
@@ -306,13 +306,13 @@ var controller={
             //Si no tenemos objeto modificado es que no se ha encontrado el id del documento a modificar
             if(!clienteUpdate){
                //Error en caso de que no exista el artículo que queremos modificar
-                return res.status(404).send({
+                return res.status(200).send({
                     status:'error',
                     message:'No existe el artículo'
                     });
                 }
                 return res.status(200).send({
-                    status:'sucess',
+                    status:'success',
                     cliente:clienteUpdate
                     });
                 });
@@ -324,7 +324,7 @@ var controller={
         }
                 }else{
                     //En caso de que se encuentren resultados no se puede efectuar la reserva porque la clienta ya tiene una reserva ese dia a esa hora
-                    return res.status(404).send({
+                    return res.status(200).send({
                         status:'error',
                         message:'No podemos procesar su solicitud, ya existe un servicio reservado en la fecha y hora solicitada '
                     });
@@ -334,7 +334,7 @@ var controller={
     
         }else{
             //Error en caso de que falten parámetros o los datos que el cliente rellena en el formulario no son correctos
-            return res.status(404).send({
+            return res.status(200).send({
                 status:'error',
                 message:'Los datos no son validos'
             });
