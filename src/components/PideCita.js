@@ -67,22 +67,29 @@ class PideCita extends Component{
     
 
     recibirPedirCita=(e)=>{
-         //  No se recarga la página
-        e.preventDefault();
+        //Hago substring para comparar los dos primeros dígitos
+        var horaCapturada=this.horaRef.current.value.substring(0,2);
+        console.log(horaCapturada);
+        //Lo paso a integer
+        var horaNumero=parseInt(horaCapturada);
+        //Validación de hora
+        if((horaCapturada>=10)&&(horaCapturada<=20)){
+              //  No se recarga la página
+            e.preventDefault();
 
         
-        nombre2=this.nombreRef.current.value;
-        apellidos2=this.apellidosRef.current.value
-        fecha2=this.fechaRef.current.value;
-        hora2=this.horaRef.current.value;
-        
-        //Debug de los datos del formulario
+            nombre2=this.nombreRef.current.value;
+            apellidos2=this.apellidosRef.current.value
+            fecha2=this.fechaRef.current.value;
+            hora2=this.horaRef.current.value;
+            //Debug de los datos del formulario
         console.log(nombre2);
         console.log(apellidos2);
         console.log(fecha2);
         console.log(hora2);
         console.log(servicio);
-    
+        }
+        
 
     }
     
@@ -164,12 +171,14 @@ class PideCita extends Component{
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="col-auto">
                                 <label htmlFor="fecha" class="col-form-label">Fecha;</label>
-                                <input type="date" class="form-control" ref={this.fechaRef} name='fechaPedirCita' required="required" min={fechaFormulario} max="2022-07-31"/>
+                                {/*Se establece límite de fecha desde la actual hasta el 31 de julio*/}
+                                <input type="date" class="form-control" ref={this.fechaRef} name='fechaPedirCita' min={fechaFormulario} max="2022-07-31" required />
                             </div>
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="col-auto">
                                 <label htmlFor="hora" class="col-form-label">Hora;</label>
-                                <input type="time" class="form-control" ref={this.horaRef} name='horaPedirCita' required="required"/>
+                                {/*Se establece límite de hora por horario de apertura de 10:00 h a 10:00 h*/}
+                                <input type="time" class="form-control" ref={this.horaRef} name='horaPedirCita' min="10:00" max="20:00" required />
                             </div>
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="d-flex  justify-content-center"><br></br></div>

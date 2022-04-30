@@ -40,7 +40,7 @@ class Footer extends Component{
                             <div class="p-2 bd-highlight"><h6 id={styles.horario}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
                                 <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
                                 <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
-                                </svg></h6><h6>HORARIO<br></br>Lunes: 16:00 - 20:00<br></br>Martes - Viernes: 10:00 - 20:00</h6></div>
+                                </svg></h6><h6>HORARIO<br></br>De lunes a domingo de 10:00 a 20:00 / Horario centro comercial</h6></div>
                         </div>
                     </div>
                     

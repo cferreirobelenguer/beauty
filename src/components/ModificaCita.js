@@ -11,6 +11,24 @@ var fecha2;
 var hora2;
 var servicio;
 var id;
+var fechaRestringida;
+var fechaTotal;
+var fechaFormulario;
+
+//Mostrar fecha actual para poder restringir las fechas y que el usuario no pueda elegir fechas anteriores a la actual
+fechaRestringida = new Date()
+
+let day = fechaRestringida.getDate()
+let month = fechaRestringida.getMonth() + 1
+let year = fechaRestringida.getFullYear()
+
+if(month < 10){
+    fechaTotal=year+"-"+"0"+month+"-"+day;
+}else{
+    fechaTotal=year+"-"+month+"-"+day;
+}
+fechaFormulario=fechaTotal.toString();
+
 //Datos del select
 const  tratamiento= [
     { value: "higiene", label: "Higiene" },
@@ -50,29 +68,33 @@ class ModificaCita extends Component{
     
 
     recibirModificarCita=(e)=>{
-         //  No se recarga la página
-        e.preventDefault();
+        //Hago substring para comparar los dos primeros dígitos
+        var horaCapturada=this.horaRef.current.value.substring(0,2);
+        console.log(horaCapturada);
+        //Lo paso a integer
+        var horaNumero=parseInt(horaCapturada);
+        //Validación de hora
+        if((horaCapturada>=10)&&(horaCapturada<=20)){
+            //  No se recarga la página
+            e.preventDefault();
 
         
-        nombre2=this.nombreRef.current.value;
-        apellidos2=this.apellidosRef.current.value
-        fecha2=this.fechaRef.current.value;
-        hora2=this.horaRef.current.value;
-        id=this.IdRef.current.value;
+            nombre2=this.nombreRef.current.value;
+            apellidos2=this.apellidosRef.current.value
+            fecha2=this.fechaRef.current.value;
+            hora2=this.horaRef.current.value;
+            id=this.IdRef.current.value;
         
-        //Debug de los datos del formulario
-        console.log(nombre2);
-        console.log(apellidos2);
-        console.log(fecha2);
-        console.log(hora2);
-        console.log(servicio);
-        console.log(id);
+            //Debug de los datos del formulario
+            console.log(nombre2);
+            console.log(apellidos2);
+            console.log(fecha2);
+            console.log(hora2);
+            console.log(servicio);
+            console.log(id);
     
-
+        }
     }
-    
-
-    /*FUNCIONA TODO PERO HAY QUE VALIDAR FORMULARIO, ES LO QUE QUEDA PENDIENTE YA DE ESTA VISTA Y HACER EL FRONT*/
     
     
     //Petición http por post para modificar la reserva
@@ -160,12 +182,12 @@ class ModificaCita extends Component{
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="col-auto">
                                 <label htmlFor="fecha" class="col-form-label">Fecha;</label>
-                                <input type="date" class="form-control" ref={this.fechaRef} name='fechaPedirCita' required="required"/>
+                                <input type="date" class="form-control" ref={this.fechaRef} name='fechaPedirCita' required min={fechaFormulario} max="2022-07-31"/>
                             </div>
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="col-auto">
                                 <label htmlFor="hora" class="col-form-label">Hora;</label>
-                                <input type="time" class="form-control" ref={this.horaRef} name='horaPedirCita' required="required"/>
+                                <input type="time" class="form-control" ref={this.horaRef} name='horaPedirCita'  min="10:00" max="20:00" required/>
                             </div>
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="d-flex  justify-content-center"><br></br></div>
