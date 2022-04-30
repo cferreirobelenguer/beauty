@@ -4,12 +4,32 @@ import axios from 'axios';
 import pidetucita from '../assets/images/pidetucita.png';
 import { Link } from 'react-router-dom';
 import Select from 'react-select'
+import Moment from 'react-moment';
+
 //Variables que van a recoger los datos del formulario
 var nombre2;
 var apellidos2;
 var fecha2;
 var hora2;
 var servicio;
+var fechaRestringida;
+var fechaTotal;
+var fechaFormulario;
+
+//Mostrar fecha actual para poder restringir las fechas y que el usuario no pueda elegir fechas anteriores a la actual
+fechaRestringida = new Date()
+
+let day = fechaRestringida.getDate()
+let month = fechaRestringida.getMonth() + 1
+let year = fechaRestringida.getFullYear()
+
+if(month < 10){
+    fechaTotal=year+"-"+"0"+month+"-"+day;
+}else{
+    fechaTotal=year+"-"+month+"-"+day;
+}
+fechaFormulario=fechaTotal.toString();
+
 //Datos del select
 const  tratamiento= [
     { value: "higiene", label: "Higiene" },
@@ -17,7 +37,6 @@ const  tratamiento= [
     { value: "peeling", label: "Peeling" },
     { value: "maquillaje", label: "Maquillaje" }
 ];
-//Validación de formularios y alertas
 
 class PideCita extends Component{
     state = {
@@ -67,9 +86,6 @@ class PideCita extends Component{
 
     }
     
-
-    /*FUNCIONA TODO PERO HAY QUE VALIDAR FORMULARIO, ES LO QUE QUEDA PENDIENTE YA DE ESTA VISTA Y HACER EL FRONT*/
-    
     
     //Petición http por post para guardar la reserva
     reservarCita=()=>{
@@ -104,6 +120,7 @@ class PideCita extends Component{
         return(
             
             <div>
+                
                 <center>
                     <img src={pidetucita} width="1500" height="1000" className="img-fluid"></img>
                 </center>
@@ -147,7 +164,7 @@ class PideCita extends Component{
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="col-auto">
                                 <label htmlFor="fecha" class="col-form-label">Fecha;</label>
-                                <input type="date" class="form-control" ref={this.fechaRef} name='fechaPedirCita' required="required"/>
+                                <input type="date" class="form-control" ref={this.fechaRef} name='fechaPedirCita' required="required" min={fechaFormulario} max="2022-07-31"/>
                             </div>
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="col-auto">
@@ -165,8 +182,7 @@ class PideCita extends Component{
                 <div className="d-flex justify-content-center"><br></br></div>
                 <section id={styles.contenidoCitas}>
                 <div className="d-flex justify-content-center">
-            
-                
+        
                 <div >
                 {/*En caso de que el status sea error que me muestre error en la reserva, si es sucess que la reserva se ha efectuado y si es null que no me
                 muestre nada porque es la primera vista inicial de la web*/
@@ -183,7 +199,6 @@ class PideCita extends Component{
 }
 </div>
                 </div>
-
                 
                 </section>
                         <div className="d-flex justify-content-center"><br></br></div>

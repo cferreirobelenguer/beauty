@@ -5,6 +5,10 @@ import decoracion5 from '../assets/images/decoracion5.png';
 import decoracion8 from '../assets/images/decoracion8.png';
 import newsletter from '../assets/images/newsletter.jpg';
 import Swal from 'sweetalert2';
+var nombreNewsletter;
+var emailNewsletter;
+var emailCorrecto=false;
+var nombreCorrecto=false;
 
 class Contacto extends Component{
     //Creamos referencias vinculadas a los datos que recogemos del formulario
@@ -14,11 +18,12 @@ class Contacto extends Component{
     emailRef=React.createRef();
     telefonoRef=React.createRef();
     ComentariosRef=React.createRef();
-    
+    nombreRef2=React.createRef();
+    emailRef2=React.createRef();
     state={
         user:{}
     };
-    
+    //Método que recoge los datos de formulario de contacto y los valida
     recibirFormulario=(e)=>{
         //  No se recarga la página
         e.preventDefault();
@@ -42,24 +47,89 @@ class Contacto extends Component{
         console.log(this.ComentariosRef.current.value);
 
     }
+    //Método que coge los datos del formulario de newsletter y valida los datos de newsletter
+    recibirFormulario2=(e)=>{
+        //  No se recarga la página
+        e.preventDefault();
+        //Debug de los valores de los input
+        console.log(this.nombreRef2.current.value);
+        console.log(this.emailRef2.current.value);
+        if(isNaN(this.nombreRef2.current.value)){
+            nombreNewsletter=this.nombreRef2.current.value;
+            nombreCorrecto=true;
+            console.log("No es número nombre: "+nombreNewsletter);
+            console.log("No es número nombre: "+nombreCorrecto);
+        }else{
+            nombreCorrecto=false;
+            console.log("Sí es número nombre: "+nombreNewsletter);
+            console.log("Sí es número nombre: "+nombreCorrecto);
+        }
+        if(this.emailRef2.current.value.indexOf("@",0)!=-1){
+            emailNewsletter=this.emailRef.current.value;
+            emailCorrecto=true;
+            console.log("Email contiene arroba: "+emailNewsletter);
+            console.log("Email contiene arroba: "+emailCorrecto);
+        }else{
+            emailCorrecto=false;
+            console.log("Email no contiene arroba: "+emailNewsletter);
+            console.log("Email no contiene arroba: "+emailCorrecto);
+        }
+
+        
+
+    }
     //Mensaje de confirmación de que se han recibido los datos del formulario
     recibido=()=>{
         //Usamos la librería SweetAlert2 para las alertas
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Hola hemos recibido tus datos correctamente, en breves nos pondremos en contacto contigo',
-            showConfirmButton: false,
-            timer: 1500,
-            width: 600,
-            padding: '3em',
-            color: '#FFF7EF',
-            background: '#F3AFC9'
-    
-        })
-
         
-    }
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Hemos recibido sus datos, en breves nos pondremos en contacto con usted',
+                showConfirmButton: false,
+                timer: 1500,
+                width: 600,
+                padding: '3em',
+                color: '#FFF7EF',
+                background: '#F3AFC9'
+        
+            })
+    
+}
+     //Mensaje de confirmación de que se han recibido los datos del formulario
+    recibido2=()=>{
+        //Usamos la librería SweetAlert2 para las alertas
+        //Si los datos de Newsletter están correctamente validados se muestra el alert sucess y si no se muestra el alert error
+        if((nombreCorrecto==true)&&(emailCorrecto==true)){
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Gracias por suscribirte a nuestra Newsletter',
+                showConfirmButton: false,
+                timer: 1500,
+                width: 600,
+                padding: '3em',
+                color: '#FFF7EF',
+                background: '#F3AFC9'
+        
+            })
+    
+        }else{
+            
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'No se ha podido procesar su solicitud',
+                showConfirmButton: false,
+                timer: 1500,
+                width: 600,
+                padding: '3em',
+                color: '#FFF7EF',
+                background: '#F3AFC9'
+        
+            })
+        }
+}
 
     
     render(){
@@ -153,7 +223,7 @@ class Contacto extends Component{
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="d-flex  justify-content-center"><br></br></div>
                         </div>  
-                            <input type="submit" className="btn text-decoration-none btn" value="Enviar" id={styles.botonTratamientos} onClick={this.recibido} />&nbsp;&nbsp;&nbsp;
+                            <input type="submit" className="btn text-decoration-none btn" value="Enviar" id={styles.botonTratamientos} onClick={this.recibido2} />&nbsp;&nbsp;&nbsp;
                             <input type="reset" className="btn text-decoration-none btn" value="Limpiar" id={styles.botonTratamientos}/>
                         </form>
                             </div>
