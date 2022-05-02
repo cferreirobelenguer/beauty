@@ -54,8 +54,9 @@ var controller={
         if(validate_nombre && validate_apellidos && validate_tratamiento && validate_fecha && validate_hora){
             cliente.find(
                 //Si searchString está incluido dentro de nombre me saca los articulos
-                //Se realiza la búsqueda por nombre, apellidos, fecha y hora
-                { "nombre":params.nombre, "apellidos":params.apellidos,"fecha":params.fecha,"hora":params.hora},
+                //Se realiza la búsqueda por fecha y hora
+                //Si hay citas en esa fecha y hora no se puede pedir cita porque ya está la cita ocupada
+                { "fecha":params.fecha,"hora":params.hora},
             
             //Ordeno de manera descendente
             ).sort()
@@ -116,12 +117,11 @@ var controller={
     
     
     },
-     //MÉTODO BUSCADOR DE DATOS DE LAS CITAS POR NOMBRE, APELLIDOS, FECHA Y HORA
+     //MÉTODO BUSCADOR DE DATOS DE LAS CITAS POR FECHA Y HORA
     //MÉTODO NECESARIO PARA SAVE Y UPDATE
     /*search:(req,res)=>{
-        //Sacar el String a buscar nombre, apellidos fecha y hora
-        var buscarNombre=req.params.nombre;
-        var buscarApellidos=req.params.apellidos;
+        //Sacar el String a buscar fecha y hora
+        
         var buscarHora=req.params.hora;
         var buscarFecha=req.params.fecha;
 
@@ -133,7 +133,7 @@ var controller={
         //Find
         cliente.find(
             //Si searchString está incluido dentro de nombre me saca los articulos
-            { "nombre":buscarNombre, "apellidos":buscarApellidos,"fecha":buscarFecha, "hora":buscarHora},
+            { "fecha":buscarFecha, "hora":buscarHora},
         
         //Ordeno de manera descendente
         ).sort()
@@ -253,8 +253,9 @@ var controller={
         if(validate_nombre && validate_apellidos && validate_tratamiento && validate_fecha && validate_hora){
             cliente.find(
                 //Si searchString está incluido dentro de nombre me saca los articulos
-                //Se realiza la búsqueda por nombre, apellidos, fecha y hora
-                { "nombre":params.nombre, "apellidos":params.apellidos,"fecha":params.fecha,"hora":params.hora},
+                //Se realiza la búsqueda por fecha y hora
+                //Si hay citas en esa fecha y hora no se puede pedir cita porque ya está la cita ocupada
+                { "fecha":params.fecha,"hora":params.hora},
             
             //Ordeno de manera descendente
             ).sort()
