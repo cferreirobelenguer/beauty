@@ -13,7 +13,7 @@ const cliente= new Twitter({
 })
 
 //Creación de tweets en twitter BeautyBot
-cliente.post('statuses/update',{status: 'Tenemos promociones del 10% de descuento en todos nuestros tratamientos hasta junio. ¿A qué esperas para venir a vernos? '})
+cliente.post('statuses/update',{status: 'Tenemos promociones del 10% de descuento en todos nuestros tratamientos hasta junio. ¿A qué esperas para venir a vernos? #beautyBotCenter '})
 .then((tweet)=>{
     //debug de la respuesta de la API de twitter
     console.log(tweet);
@@ -22,7 +22,7 @@ cliente.post('statuses/update',{status: 'Tenemos promociones del 10% de descuent
     console.log(error);
 })
 
-cliente.post('statuses/update',{status: 'Puedes seguirnos también por facebook, y si quieres desde nuestra web tenemos un servício de chatbot para asistirte en las dudas que tengas sobre nuestros tratamientos'})
+cliente.post('statuses/update',{status: 'Puedes seguirnos también por facebook, y si quieres desde nuestra web tenemos un servício de chatbot para asistirte en las dudas que tengas sobre nuestros tratamientos #beautyBotCenter'})
 .then((tweet)=>{
     //debug de la respuesta de la API de twitter
     console.log(tweet);
@@ -31,7 +31,7 @@ cliente.post('statuses/update',{status: 'Puedes seguirnos también por facebook,
     console.log(error);
 })
 
-cliente.post('statuses/update',{status: 'Uno de los consejos más sencillos para mantener una piel sana. Al usar una crema hidratante facial con factor mínimo FPS 30, proteges tu rostro de los efectos de los rayos UVA.'})
+cliente.post('statuses/update',{status: 'Uno de los consejos más sencillos para mantener una piel sana. Al usar una crema hidratante facial con factor mínimo FPS 30, proteges tu rostro de los efectos de los rayos UVA. #beautyBotCenter'})
 .then((tweet)=>{
     //debug de la respuesta de la API de twitter
     console.log(tweet);
@@ -40,7 +40,7 @@ cliente.post('statuses/update',{status: 'Uno de los consejos más sencillos para
     console.log(error);
 })
 
-cliente.post('statuses/update',{status: 'Si no tienes colorete a mano, sustitúyelo por lápiz labial. Un pintalabios, bien aplicado, puede sustituir perfectamente a tu colorete habitual, aportando ese color tan bonito a tus mejillas.'})
+cliente.post('statuses/update',{status: 'Si no tienes colorete a mano, sustitúyelo por lápiz labial. Un pintalabios, bien aplicado, puede sustituir perfectamente a tu colorete habitual, aportando ese color tan bonito a tus mejillas. #beautyBotCenter'})
 .then((tweet)=>{
     //debug de la respuesta de la API de twitter
     console.log(tweet);
@@ -49,7 +49,7 @@ cliente.post('statuses/update',{status: 'Si no tienes colorete a mano, sustitúy
     console.log(error);
 })
 
-cliente.post('statuses/update',{status: 'Te informamos de que estamos en la calle Miguel Yuste, ¡Ven a conocernos!'})
+cliente.post('statuses/update',{status: 'Te informamos de que estamos en la calle Miguel Yuste, ¡Ven a conocernos! #beautyBotCenter'})
 .then((tweet)=>{
     //debug de la respuesta de la API de twitter
     console.log(tweet);
@@ -57,3 +57,12 @@ cliente.post('statuses/update',{status: 'Te informamos de que estamos en la call
 .catch((error)=>{
     console.log(error);
 })
+
+//Buscar tweets con #beautyBotCenter
+//Me muestra todos los tweets en un console.log para verificar que se han posteado correctamente
+
+cliente.get('search/tweets', {q: '#beautyBotCenter'}, function(error, tweets, response) {
+    tweets.statuses.forEach(function(tweet) {
+        console.log("tweet: " + tweet.text)
+    });
+});
