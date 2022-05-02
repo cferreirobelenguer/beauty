@@ -178,7 +178,7 @@ class PideCita extends Component{
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="col-auto">
                                 <label htmlFor="hora" class="col-form-label">Hora;</label>
-                                {/*Se establece límite de hora por horario de apertura de 10:00 h a 20:00 h*/}
+                                {/*Se establece límite de hora por horario de apertura de 10:00 h a 20:00 h, muestra mensaje de error*/}
                                 {/*Con step se indica que el valor debe ser cada hora*/}
                                 <input type="time" class="form-control" ref={this.horaRef} name='horaPedirCita' min="10:00" max="20:00" step="3600" required />
                             </div>
