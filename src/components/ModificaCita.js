@@ -70,11 +70,14 @@ class ModificaCita extends Component{
     recibirModificarCita=(e)=>{
         //Hago substring para comparar los dos primeros dígitos
         var horaCapturada=this.horaRef.current.value.substring(0,2);
+        var rango=this.horaRef.current.value.substring(this.horaRef.current.value.length-2,this.horaRef.current.value.length);
         console.log(horaCapturada);
-        //Lo paso a integer
-        var horaNumero=parseInt(horaCapturada);
-        //Validación de hora
-        if((horaCapturada>=10)&&(horaCapturada<=20)){
+        console.log(rango);
+        
+        var rangoString=rango.toString();
+         //Validación de hora
+        //Se concertan citas cada hora
+        if((horaCapturada>=10)&&(horaCapturada<=20)&&(rangoString=='00')){
             //  No se recarga la página
             e.preventDefault();
 
@@ -187,7 +190,9 @@ class ModificaCita extends Component{
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="col-auto">
                                 <label htmlFor="hora" class="col-form-label">Hora;</label>
-                                <input type="time" class="form-control" ref={this.horaRef} name='horaPedirCita'  min="10:00" max="20:00" required/>
+                                {/*Se establece límite de hora por horario de apertura de 10:00 h a 20:00 h*/}
+                                {/*Con step se indica que el valor debe ser cada hora*/}
+                                <input type="time" class="form-control" ref={this.horaRef} name='horaPedirCita'  min="10:00" max="20:00" step="3600" required/>
                             </div>
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="d-flex  justify-content-center"><br></br></div>
