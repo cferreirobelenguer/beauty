@@ -24,10 +24,15 @@ let month = fechaRestringida.getMonth() + 1
 let year = fechaRestringida.getFullYear()
 
 if(month < 10){
-    fechaTotal=year+"-"+"0"+month+"-"+day;
+    month="0"+month;
 }else{
     fechaTotal=year+"-"+month+"-"+day;
 }
+if(day<10){
+    day="0"+day;
+}
+    fechaTotal=year+"-"+month+"-"+day;
+
 fechaFormulario=fechaTotal.toString();
 
 //Datos del select
@@ -171,13 +176,13 @@ class PideCita extends Component{
                             </div>
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="col-auto">
-                                <label htmlFor="fecha" class="col-form-label">Fecha;</label>
+                                <label htmlFor="fecha" class="col-form-label">Fecha</label>
                                 {/*Se establece límite de fecha desde la actual hasta el 31 de julio*/}
                                 <input type="date" class="form-control" ref={this.fechaRef} name='fechaPedirCita' min={fechaFormulario} max="2022-07-31" required />
                             </div>
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="col-auto">
-                                <label htmlFor="hora" class="col-form-label">Hora;</label>
+                                <label htmlFor="hora" class="col-form-label">Hora</label>
                                 {/*Se establece límite de hora por horario de apertura de 10:00 h a 20:00 h, muestra mensaje de error*/}
                                 {/*Con step se indica que el valor debe ser cada hora*/}
                                 <input type="time" class="form-control" ref={this.horaRef} name='horaPedirCita' min="10:00" max="20:00" step="3600" required />
@@ -193,7 +198,7 @@ class PideCita extends Component{
                 <div className="d-flex justify-content-center"><br></br></div>
                 <section id={styles.contenidoCitas}>
                 <div className="d-flex justify-content-center">
-        
+            
                 <div >
                 {/*En caso de que el status sea error que me muestre error en la reserva, si es sucess que la reserva se ha efectuado y si es null que no me
                 muestre nada porque es la primera vista inicial de la web*/
@@ -207,8 +212,8 @@ class PideCita extends Component{
                         else
                             return ""
                     })()
-}
-</div>
+                }
+            </div>
                 </div>
                 
                 </section>

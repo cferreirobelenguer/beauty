@@ -23,10 +23,15 @@ let month = fechaRestringida.getMonth() + 1
 let year = fechaRestringida.getFullYear()
 
 if(month < 10){
-    fechaTotal=year+"-"+"0"+month+"-"+day;
+    month="0"+month;
 }else{
     fechaTotal=year+"-"+month+"-"+day;
 }
+if(day<10){
+    day="0"+day;
+}
+    fechaTotal=year+"-"+month+"-"+day;
+
 fechaFormulario=fechaTotal.toString();
 
 //Datos del select
