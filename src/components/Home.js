@@ -3,6 +3,7 @@ import portadaHome from '../assets/images/portadaHome.jpg';
 import decoracion2 from '../assets/images/decoracion2.png';
 import decoracion3 from '../assets/images/decoracion3.png';
 import facebookPortada from '../assets/images/facebookPortada.png';
+import twitterPortada from '../assets/images/twitter.png';
 import styles from '../assets/css/estilos.module.css';
 import { Link } from 'react-router-dom';
 
@@ -73,9 +74,10 @@ class Home extends Component{
                         <div className="d-flex  justify-content-center"><br></br></div>
                         <div className="d-flex  justify-content-center"><br></br></div>
                         <div className="d-flex  justify-content-center"><br></br></div>
-                        <a href="https://www.facebook.com/BeautyBot-112006418152929"><div className="d-flex  justify-content-center" data-aos="zoom-in"><img id={styles.fotoFacebook} src={facebookPortada} width="1000" height="500" className="img-fluid" alt="twitter"/></div>
-                        <div className="d-flex justify-content-right" data-aos="zoom-in"><img id={styles.fotoDecoracion} src={decoracion3} width="250" height="250" className="img-fluid" alt="fotoEstrellas"/></div></a>
-
+                        <a href="https://www.facebook.com/BeautyBot-112006418152929"><div className="d-flex  justify-content-center" data-aos="zoom-in"><img id={styles.fotoFacebook} src={facebookPortada} width="1000" height="500" className="img-fluid" alt="facebook"/></div></a>
+                        <div className="d-flex  justify-content-center"><br></br></div>
+                        <a href="https://twitter.com/beautycenterBot"><div className="d-flex  justify-content-center" data-aos="zoom-in"><img id={styles.fotoFacebook} src={twitterPortada} width="1000" height="500" className="img-fluid" alt="facebook"/></div>
+                        <div className="d-flex justify-content-center" data-aos="zoom-in"><img id={styles.fotoDecoracion} src={decoracion3} width="250" height="250" className="img-fluid" alt="fotoEstrellas"/></div></a>
     
     </div>
 

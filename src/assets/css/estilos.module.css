@@ -4,6 +4,28 @@
   background-color: #FFF7EF;
 }
 
+/*Estilos de fuentes*/
+@font-face {
+  font-family: "mistrully";
+  src: url("../font/Mistrully.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "ovo";
+  src: url("../font/Ovo-Regular.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "roboto";
+  src: url("../font/roboto.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 /*Estilos del header*/
 
 /*Estilos del menú normal para pc y ipad*/
@@ -11,6 +33,7 @@
   background-color:#FFF7EF ;
   padding-top:10px;
   color:#F3AFC9;
+  font-family: "roboto";
   font-size: 30px;
 
 }
@@ -19,7 +42,7 @@
   padding-top:10px;
   color:#F3AFC9;
   font-size: 2vw;
-  font-family: 'Ovo', serif;
+  font-family: "roboto";
   
 
 }
@@ -32,6 +55,7 @@
   margin: auto;
   padding: 10px;
   font-size: 24px;
+  font-family: "roboto";
 
 }
 
@@ -85,6 +109,7 @@
   position: relative;
   background-color: #F3AFC9;
   min-height: 48px;
+  font-family: "roboto";
 }
 
 .contenidoNavResponsive nav {
@@ -116,7 +141,7 @@
 /*Estilos de home*/
 .Ofertas{
   background-color: #F3AFC9;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "roboto";
   font-size: 3vw;
   margin:auto;
   text-align: center ;
@@ -146,7 +171,7 @@
 
 /*Animaciones slidein en descubre tratamientos Home*/
 .letraTitulo {
-  font-family: 'Ovo', serif;
+  font-family: "mistrully";
   font-size: 4.5vw;
   color: #323C3D;
   animation: fadeIn 5s;
@@ -207,7 +232,7 @@
 }
 
 .letraDescubreTratamientos {
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size: 2.5vw;
   padding: 5px;
   color: #323C3D;
@@ -270,7 +295,7 @@
 
 
 .letraProductos {
-  font-family: 'Ovo', serif;
+  font-family: "mistrully";
   font-size:3.5vw;
   color: #323C3D;
 }
@@ -281,7 +306,7 @@
 }
 
 .letraPrimavera {
-  font-family: 'Ovo', serif;
+  font-family: "mistrully";
   font-size:3.5vw;
   color: #323C3D;
 }
@@ -298,7 +323,7 @@
 #parte1{
   background-color: #C5FCE6;
   opacity:70%;
-  font-family: 'Ovo', serif;
+  font-family: "roboto";
   font-weight: bold;
   font-size:4vw;
   padding: 100px;
@@ -312,7 +337,7 @@
   background-color: #F3AFC9;
   margin: auto;
   padding: 20px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'ovo';
   font-size:4vw;
 }
 #ubicacion{
@@ -334,13 +359,13 @@
   background-color: #FFF7EF;
 }
 .tituloNosotros{
-  font-family: 'Oooh Baby', cursive;
+  font-family: "mistrully";
   font-size:6vw;
   color: #323C3D;
 }
 
 .tituloNosotros2{
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size:4vw;
   color: #323C3D;
 
@@ -359,7 +384,7 @@
   background-color: #ecdce2;
 }
 .tituloNosotros3{
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   padding-top: 100px;
   padding-bottom: 50px;
   padding-left: 80px;
@@ -369,7 +394,7 @@
 }
 
 .tituloNosotros4{
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size: 4vw;
   color: #323C3D;
 }
@@ -410,7 +435,7 @@
   text-align: center;
 }
 #higieneFacialLetrero{
-  font-family: 'Oooh Baby', cursive;
+  font-family: 'ovo';
   font-size: 6vw;
   color: #323C3D;
   background-color: #F1BEB9;
@@ -419,32 +444,32 @@
 #higieneFacial{
   padding-left: 70px;
   padding-right: 70px;
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size: 6vw;
   color: #323C3D;
   background-color: #F1BEB9;
   
 }
 .higieneFacial2{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'ovo';
   font-size: 2.5vw;
   padding: 50px;
 }
 .hidral2{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'ovo';
 }
 .peeling2{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'ovo';
 }
 .maquillaje2{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'ovo';
 }
 #hidral{
   background-color: #C5FCE6;
   text-align: center;
 }
 #higieneHidralLetrero{
-  font-family: 'Oooh Baby', cursive;
+  font-family: "mistrully";
   font-size: 6vw;
   color: #323C3D;
   background-color: #C5FCE6;
@@ -453,7 +478,7 @@
 #higieneHydral{
   padding-left: 80px;
   padding-right: 80px;
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size: 6vw;
   color: #323C3D;
   background-color: #C5FCE6;
@@ -466,7 +491,7 @@
   margin:auto;
 }
 #containerPeeling{
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size: 6vw;
   color: #323C3D;
   background-color:  #ECDCE2;
@@ -474,7 +499,7 @@
   text-align: center;
 }
 #higienePeelingLetrero{
-  font-family: 'Oooh Baby', cursive;
+  font-family: "mistrully";
   font-size: 6vw;
   color: #323C3D;
   background-color:  #ECDCE2;
@@ -486,7 +511,7 @@
 #higienePeeling{
   padding-left: 80px;
   padding-right: 80px;
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size: 4vw;
   color: #323C3D;
   background-color:  #ECDCE2;
@@ -495,7 +520,7 @@
 }
 
 #containerMakeUp{
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size: 6vw;
   color: #323C3D;
   background-color:  #F3AFC9;
@@ -508,7 +533,7 @@
 #maquillajeContenido{
   padding-left: 70px;
   padding-right: 70px;
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size: 3vw;
   color: #323C3D;
   background-color:  #F3AFC9;
@@ -521,7 +546,7 @@
   background-color: #FFF7EF;
 }
 #blogCabecera{
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size: 2.5vw;
   color: #323C3D;
   background-color:  #FFF7EF;
@@ -536,7 +561,7 @@
   padding:50px;
   padding-left: 80px;
   padding-right: 80px;
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size: 22px;
   color: #323C3D;
 }
@@ -544,7 +569,7 @@
   padding:50px;
   padding-left: 80px;
   padding-right: 80px;
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size: 22px;
   color: #323C3D;
 }
@@ -589,7 +614,7 @@
   text-align: center;
   padding: 150px;
   margin: auto;
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size: 2.5vw;
   color: #323C3D;
   padding-bottom: 20px;
@@ -599,7 +624,7 @@
   background-color: #FFF7EF;
 }
 #rotuloVeCita{
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size: 2.5vw;
   color: #323C3D;
   margin: auto;
@@ -609,7 +634,7 @@
   background-color: #FFF7EF;
   margin: auto;
   text-align: center;
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size: 4vw;
   color: #323C3D;
   margin: auto;
@@ -619,14 +644,14 @@
   background-color: #FFF7EF;
   padding:50px;
   text-align: center;
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size: 3vw;
   color: #323C3D;
 }
 #contenidoNombre{
   padding:20px;
   text-align: center;
-  font-family: 'Ovo', serif;
+  font-family: 'ovo';
   font-size: 3vw;
   color: #323C3D;
 }

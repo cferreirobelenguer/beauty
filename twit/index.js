@@ -33,8 +33,11 @@ T.get('search/tweets', { q: 'beautyBotComentanos', count: 100 }, function(err, d
         let id_usuario=i.id_str;
         //Retwiteamos cogiendo como parámetro el id del usuario
         T.post('statuses/retweet/:id', { id:id_usuario }, function(err, resultado) {
-            console.log(resultado)
-        })
+            console.log(resultado);
+            
+        });
+        
+    
     
     }
     

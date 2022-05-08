@@ -4,15 +4,6 @@
 <head>
   <meta charset="utf-8" />
 
-  <!--Tipografía Ovo importada de Google Fonts-->
-  <!--Tipografia Open Sans importada de Google Fonts-->
-  <!--Tipografía Nothing You Could Do importada de Google Fonts-->
-  <!--Tipografia Oooh Baby-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Oooh+Baby&family=Open+Sans:ital,wght@1,300&family=Ovo&display=swap"
-    rel="stylesheet">
 
   <!--Se importa la librería AOS de react para crear animaciones-->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -35,6 +26,23 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <title>Beauty-Cosmética-Maquillaje</title>
+  <!--Estilos de chatbot de dialogflow-->
+  <style>
+    df-messenger {
+      /*color de fondo del mensaje del bot*/
+      --df-messenger-bot-message: #C5FCE6;
+      /*color del botón de inicio del chat*/
+      --df-messenger-button-titlebar-color: #FEB8BF;
+      /*Color de fondo del chat*/
+      --df-messenger-chat-background-color: #fafafa;
+      /*Color de la fuente del chat*/
+      --df-messenger-font-color: #323C3D;
+      /*El color del ícono de envío en la casilla de entrada de texto*/
+      --df-messenger-send-icon: #FEB8BF;
+      /*Color de fondo de los mensajes que manda el usuario*/
+      --df-messenger-user-message: #F3AFC9;
+    }
+  </style>
 </head>
 
 <body>
@@ -50,29 +58,15 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  <script type="text/javascript">
-    (function (d, m) {
-      var kommunicateSettings = {
-        "appId": "1ee16e0288cf411f8212b080adb3fc6ae",
-        "popupWidget": true,
-        "automaticChatOpenOnNavigation": true
-      };
-      var s = document.createElement("script");
-      s.type = "text/javascript";
-      s.async = true;
-      s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
-      var h = document.getElementsByTagName("head")[0];
-      h.appendChild(s);
-      window.kommunicate = m;
-      m._globals = kommunicateSettings;
-    })(document, window.kommunicate || {});
-    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
-  </script>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger intent="WELCOME"
+    chat-icon="https://i.pinimg.com/originals/69/7c/3e/697c3e1106c1508096965049a1181f0f.jpg" chat-title="beauty"
+    agent-id="24169a3c-94d3-42ea-8e8f-96549d21e406" language-code="es"></df-messenger>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
-  
+
 </body>
 
 </html>

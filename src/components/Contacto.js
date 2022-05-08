@@ -5,10 +5,21 @@ import decoracion5 from '../assets/images/decoracion5.png';
 import decoracion8 from '../assets/images/decoracion8.png';
 import newsletter from '../assets/images/newsletter.jpg';
 import Swal from 'sweetalert2';
+//Variables de formulario de contacto
+var nombreContacto=false;
+var emailContacto=false;
+var telefonoContacto=false;
+var nombre;
+var email;
+var comentarios;
+var telefono;
+//Variables de formulario de newsletter
 var nombreNewsletter;
 var emailNewsletter;
 var emailCorrecto=false;
 var nombreCorrecto=false;
+
+
 
 class Contacto extends Component{
     //Creamos referencias vinculadas a los datos que recogemos del formulario
@@ -27,19 +38,54 @@ class Contacto extends Component{
     recibirFormulario=(e)=>{
         //  No se recarga la página
         e.preventDefault();
-        
+        //Validación de formulario de contacto
+        if(isNaN(this.nombreRef.current.value)){
+            nombreContacto=true;
+            nombre=this.nombreRef.current.value;
+            console.log("No es número nombre contacto: "+nombre);
+            console.log("No es número nombre contacto : "+nombreContacto);
+        }else{
+            nombreContacto=false;
+            console.log("Es número nombre contacto: "+nombre);
+            console.log("Es número nombre contacto : "+nombreContacto);
+        }
+        if(this.emailRef.current.value.indexOf("@",0)!=-1){
+            email=this.emailRef.current.value;
+            emailContacto=true;
+            console.log("Email contiene arroba contacto: "+email);
+            console.log("Email contiene arroba contacto: "+emailContacto);
+        }else{
+            emailContacto=false;
+            console.log("Email no contiene arroba contacto: "+email);
+            console.log("Email no contiene arroba contacto: "+emailContacto);
+        }
+    
+        if(!isNaN(this.telefonoRef.current.value)){
+            telefono=this.telefonoRef.current.value;
+            telefonoContacto=true;
+            console.log("Teléfono contiene números : "+telefono);
+            console.log("Teléfono contiene números : "+telefonoContacto);
+        }else{
+            telefonoContacto=false;
+            console.log("Teléfono no contiene números : "+telefono);
+            console.log("Teléfono no contiene números : "+telefonoContacto);
+        }
+
+
+        if((nombreContacto==true)&&(emailContacto==true)&&(telefonoContacto==true)){
         //Se crea un objeto user y se le atribuyen los valores de los input
         //current.value se usa para coger los valores
         var user={
-            nombre:this.nombreRef.current.value,
-            email:this.emailRef.current.value,
-            telefono:this.telefonoRef.current.value,
-            comentarios:this.ComentariosRef.current.value,
+            nombre,
+            email,
+            telefono,
+            comentarios,
 
         };
         this.setState({
             user:user
-        });
+            });
+        }
         //Debug de los valores de los input
         console.log(this.nombreRef.current.value);
         console.log(this.emailRef.current.value);
@@ -51,37 +97,38 @@ class Contacto extends Component{
     recibirFormulario2=(e)=>{
         //  No se recarga la página
         e.preventDefault();
-        //Debug de los valores de los input
-        console.log(this.nombreRef2.current.value);
-        console.log(this.emailRef2.current.value);
+        
+        //Validación de formulario de newsletter
         if(isNaN(this.nombreRef2.current.value)){
             nombreNewsletter=this.nombreRef2.current.value;
             nombreCorrecto=true;
-            console.log("No es número nombre: "+nombreNewsletter);
-            console.log("No es número nombre: "+nombreCorrecto);
+            console.log("No es número nombre newsletter: "+nombreNewsletter);
+            console.log("No es número nombre newsletter: "+nombreCorrecto);
         }else{
             nombreCorrecto=false;
-            console.log("Sí es número nombre: "+nombreNewsletter);
-            console.log("Sí es número nombre: "+nombreCorrecto);
+            console.log("Sí es número nombre newsletter: "+nombreNewsletter);
+            console.log("Sí es número nombre newsletter: "+nombreCorrecto);
         }
         if(this.emailRef2.current.value.indexOf("@",0)!=-1){
             emailNewsletter=this.emailRef.current.value;
             emailCorrecto=true;
-            console.log("Email contiene arroba: "+emailNewsletter);
-            console.log("Email contiene arroba: "+emailCorrecto);
+            console.log("Email contiene arroba newsletter: "+emailNewsletter);
+            console.log("Email contiene arroba newsletter: "+emailCorrecto);
         }else{
             emailCorrecto=false;
-            console.log("Email no contiene arroba: "+emailNewsletter);
-            console.log("Email no contiene arroba: "+emailCorrecto);
+            console.log("Email no contiene arroba newsletter: "+emailNewsletter);
+            console.log("Email no contiene arroba newsletter: "+emailCorrecto);
         }
 
-        
+        //Debug de los valores de los input
+        console.log(this.nombreRef2.current.value);
+        console.log(this.emailRef2.current.value);
 
     }
-    //Mensaje de confirmación de que se han recibido los datos del formulario
+    //Mensaje de confirmación de que se han recibido los datos del formulario de contacto
     recibido=()=>{
         //Usamos la librería SweetAlert2 para las alertas
-        
+        if((nombreContacto==true)&&(emailContacto==true)&&(telefonoContacto==true)){
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
@@ -94,9 +141,23 @@ class Contacto extends Component{
                 background: '#F3AFC9'
         
             })
+        }else{
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'No se ha podido procesar su solicitud',
+                showConfirmButton: false,
+                timer: 1500,
+                width: 600,
+                padding: '3em',
+                color: '#FFF7EF',
+                background: '#F3AFC9'
+        
+            })
+        }
     
 }
-     //Mensaje de confirmación de que se han recibido los datos del formulario
+     //Mensaje de confirmación de que se han recibido los datos del formulario de newsletter
     recibido2=()=>{
         //Usamos la librería SweetAlert2 para las alertas
         //Si los datos de Newsletter están correctamente validados se muestra el alert sucess y si no se muestra el alert error
