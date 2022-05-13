@@ -28,9 +28,9 @@ class SobreNosotros extends Component{
                     <div class="d-flex justify-content-rigth" data-aos="zoom-in"><img src={decoracion5} id={styles.decoracion5} width="110" heigth="110" className="img-fluid"></img></div>
                     <div class="d-flex justify-content-center"><br></br></div>
                 </div>
-                <div className={styles.portadaNosotros} data-aos="fade-down">
-                    <img src={SobreNosotrosImagen} onMouseEnter={conFiltro} onMouseLeave={sinFiltro} width="1310" height="1310" className="img-fluid"></img>
-                </div>
+                
+                    <img src={SobreNosotrosImagen} data-aos="fade-down" onMouseEnter={conFiltro} onMouseLeave={sinFiltro} width="2000" height="2000" className="img-fluid"></img>
+                
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoNosotros2}>
                     <div class="d-flex justify-content-center"><br></br></div>
                     <div class="d-flex justify-content-center"><h6 className={styles.tituloNosotros3}>Beauty es un lugar donde nuestra mayor prioridad es hacerte sentir especial. No sólo miramos por tu salud y tu belleza, sobre todo nuestro objetivo es hacer de tu tiempo ocn nosotros una experiencia única.<br></br>Beauty nace de la mano de grandes profesionales del mundo de la estética. De la ilusión de un proyecto en común, cuyo propósito es dejarse el alma a diario con cada una de las personas que acuden a nuestros salones.</h6></div>

@@ -2,7 +2,7 @@ import React,{Component} from "react";
 
 import higieneHydral from '../assets/images/hidralInfusion.png';
 import peeling from '../assets/images/Peeling.png';
-import higiene from '../assets/images/facialPurifying.png';
+import higiene from '../assets/images/facial-purifying.png';
 import maquillaje from '../assets/images/maquillaje.png';
 import styles from '../assets/css/estilos.module.css';
 import decoracion4 from '../assets/images/decoracion4.png';
