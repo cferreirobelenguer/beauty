@@ -62,7 +62,10 @@ class Home extends Component{
                     </div>
                 </div>
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenedorProductos}>
-                        <div className="d-flex flex-row-reverse" data-aos="zoom-in"><img id={styles.fotoDecoracion} src={decoracion2} width="200" height="200" className="img-fluid" alt="fotoEstrellas"/></div>
+                        <div className="d-flex  justify-content-center"><br></br></div>
+                        <div className="d-flex  justify-content-center"><br></br></div>
+                        <div className="d-flex  justify-content-center"><br></br></div>
+                        <div className="d-flex  justify-content-center"><br></br></div>
                         <div className="d-flex  justify-content-center" data-aos="fade-down"><h1 className={styles.letraProductos} id="letraProductos2"> ¿A qué esperas?</h1></div>
                         <div className="d-flex  justify-content-center" data-aos="fade-down"><h3 className={styles.letraPrimavera}>¡Pon a punto tu piel para la primavera!</h3></div>
                         <div className="d-flex  justify-content-center"><br></br></div>
@@ -74,10 +77,10 @@ class Home extends Component{
                         <div className="d-flex  justify-content-center"><br></br></div>
                         <div className="d-flex  justify-content-center"><br></br></div>
                         <div className="d-flex  justify-content-center"><br></br></div>
-                        <a href="https://www.facebook.com/BeautyBot-112006418152929"><div className="d-flex  justify-content-center" data-aos="zoom-in"><img id={styles.fotoFacebook} src={facebookPortada} width="1000" height="500" className="img-fluid" alt="facebook"/></div></a>
+                        <a href="https://www.facebook.com/BeautyBot-112006418152929"><div className="d-flex  justify-content-center" data-aos="zoom-in"><img id={styles.fotoFacebook} src={facebookPortada} width="800" height="600" className="img-fluid" alt="facebook"/></div></a>
                         <div className="d-flex  justify-content-center"><br></br></div>
-                        <a href="https://twitter.com/beautycenterBot"><div className="d-flex  justify-content-center" data-aos="zoom-in"><img id={styles.fotoFacebook} src={twitterPortada} width="1000" height="500" className="img-fluid" alt="facebook"/></div>
-                        <div className="d-flex justify-content-center" data-aos="zoom-in"><img id={styles.fotoDecoracion} src={decoracion3} width="250" height="250" className="img-fluid" alt="fotoEstrellas"/></div></a>
+                        <a href="https://twitter.com/beautycenterBot"><div className="d-flex  justify-content-center" data-aos="zoom-in"><img id={styles.fotoFacebook} src={twitterPortada} width="800" height="600" className="img-fluid" alt="facebook"/></div>
+                        </a>
     
     </div>
 

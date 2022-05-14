@@ -21,11 +21,11 @@ class SobreNosotros extends Component{
             <div className={styles.fondoNosotros}>
             
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoNosotros}>
-                    <div class="d-flex flex-row-reverse" data-aos="zoom-in"><img src={decoracion4} id={styles.decoracion4} width="110" heigth="110" className="img-fluid"></img></div>
+                    <div class="d-flex flex-row-reverse" data-aos="zoom-in"><img src={decoracion4} id={styles.decoracion4} width="100" heigth="80" className="img-fluid"></img></div>
                     <div class="d-flex justify-content-center"><h1 className={styles.tituloNosotros}>¿Qué es beauty?</h1></div>
                     <div class="d-flex justify-content-center"><br></br></div>
                     <div class="d-flex justify-content-center"><h2 className={styles.tituloNosotros2}>Nuestra historia</h2></div>
-                    <div class="d-flex justify-content-rigth" data-aos="zoom-in"><img src={decoracion5} id={styles.decoracion5} width="110" heigth="110" className="img-fluid"></img></div>
+                    <div class="d-flex justify-content-rigth" data-aos="zoom-in"><img src={decoracion5} id={styles.decoracion5} width="100" heigth="80" className="img-fluid"></img></div>
                     <div class="d-flex justify-content-center"><br></br></div>
                 </div>
                 
@@ -35,8 +35,8 @@ class SobreNosotros extends Component{
                     <div class="d-flex justify-content-center"><br></br></div>
                     <div class="d-flex justify-content-center"><h6 className={styles.tituloNosotros3}>Beauty es un lugar donde nuestra mayor prioridad es hacerte sentir especial. No sólo miramos por tu salud y tu belleza, sobre todo nuestro objetivo es hacer de tu tiempo ocn nosotros una experiencia única.<br></br>Beauty nace de la mano de grandes profesionales del mundo de la estética. De la ilusión de un proyecto en común, cuyo propósito es dejarse el alma a diario con cada una de las personas que acuden a nuestros salones.</h6></div>
                     <div class="d-flex justify-content-center"><h3 className={styles.tituloNosotros4}>¡Te esperamos!</h3></div>
-                    <div class="d-flex flex-row-reverse" data-aos="zoom-in"><img src={decoracion6} id={styles.decoracion6} width="110" heigth="110" className="img-fluid"></img></div>
-                    <div class="d-flex flex-row-rigth" data-aos="zoom-in"><img src={decoracion7} id={styles.decoracion7} width="110" heigth="110" className="img-fluid"></img></div>
+                    <div class="d-flex flex-row-reverse" data-aos="zoom-in"><img src={decoracion6} id={styles.decoracion6} width="100" heigth="80" className="img-fluid"></img></div>
+                    <div class="d-flex flex-row-rigth" data-aos="zoom-in"><img src={decoracion7} id={styles.decoracion7} width="100" heigth="80" className="img-fluid"></img></div>
                     <div class="d-flex justify-content-center"><br></br></div>
                 </div>
                 

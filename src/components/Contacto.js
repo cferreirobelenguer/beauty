@@ -204,11 +204,11 @@ class Contacto extends Component{
                 
                 <div className="container-fluid">
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoNosotros}>
-                    <div className="d-flex flex-row-reverse" data-aos="zoom-in"><img src={decoracion4} id={styles.decoracion4} width="110" heigth="110" className="img-fluid"></img></div>
+                    <div className="d-flex flex-row-reverse" data-aos="zoom-in"><img src={decoracion4} id={styles.decoracion4} width="100" heigth="100" className="img-fluid"></img></div>
                     <div className="d-flex justify-content-center"><h1 className={styles.tituloNosotros}>¡Contacta con nosotros!</h1></div>
                     <div className="d-flex justify-content-center"><br></br></div>
                     <div className="d-flex justify-content-center"><h6 id={styles.blogCabecera}>¡No dudes en contactarnos, estamos en tu disposición!</h6></div>
-                    <div className="d-flex justify-content-rigth" data-aos="zoom-in"><img src={decoracion5} id={styles.decoracion5} width="110" heigth="110" className="img-fluid"></img></div>
+                    <div className="d-flex justify-content-rigth" data-aos="zoom-in"><img src={decoracion5} id={styles.decoracion5} width="100" heigth="100" className="img-fluid"></img></div>
                     <div className="d-flex justify-content-center"><br></br></div>
                 </div>
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoFormulario}>
@@ -249,16 +249,12 @@ class Contacto extends Component{
                 {/*Mensaje de saludo por enviar los datos*/}
                 {this.state.user.nombre && 
                     <div id="user-data">
-                {/*Mostrar datos del formulario
-                Se imprimen el nombre de forma reactiva a medida 
-                que se va escribiendo en el formulario*/}
-                        <h1>Gracias por escribirnos {user.nombre}</h1>
                         
                     </div>
                 }
                 </center>
                 
-                <div class="d-flex justify-content-center" data-aos="zoom-in"><img src={decoracion8}  width="150" heigth="150" className="img-fluid"></img></div>
+                <div class="d-flex justify-content-center" data-aos="zoom-in"><img src={decoracion8}  width="100" heigth="80" className="img-fluid"></img></div>
                 </div>
                 <div className="d-flex flex-row bd-highlight mb-3" id={styles.contenedorNewsletter}>
                 <div className="d-flex flex-column bd-highlight mb-3">
@@ -274,12 +270,12 @@ class Contacto extends Component{
                             <div class="row g-3 align-items-center">
                             <div class="col-auto">
                                 <label htmlFor="" class="col-form-label">Nombre&nbsp;&nbsp;&nbsp;</label>
-                                <input type="text" class="form-control" ref={this.nombreRef2} name='nombre2' required="required"/>
+                                <input type="text" class="form-control" ref={this.nombreRef2} name='nombre2' required="required"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div class="col-auto">
                                 <label htmlFor="" class="col-form-label">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                                <input type="email" class="form-control" ref={this.emailRef2} name='email2' required="required"/>
+                                <input type="email" class="form-control" ref={this.emailRef2} name='email2' required="required"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             </div>
                             <div className="d-flex  justify-content-center"><br></br></div>
                             <div className="d-flex  justify-content-center"><br></br></div>
@@ -290,7 +286,7 @@ class Contacto extends Component{
                             </div>
                     </div>
                     <div className="d-flex flex-column-reverse">
-                        <img src={newsletter}  data-aos="flip-up"  width="400" heigth="400" className="img-fluid"></img>
+                    <img src={newsletter}  data-aos="flip-up"  width="650" heigth="650" className="img-fluid"></img>
                     </div>
                 </div>
                 </div>

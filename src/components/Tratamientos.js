@@ -16,17 +16,17 @@ class Tratamientos extends Component{
             <div className={styles.tratamientosFondo}>
     
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoNosotros}>
-                    <div class="d-flex flex-row-reverse" data-aos="zoom-in"><img src={decoracion4} id={styles.decoracion4} width="110" heigth="110" className="img-fluid"></img></div>
+                    <div class="d-flex flex-row-reverse" data-aos="zoom-in"><img src={decoracion4} id={styles.decoracion4} width="100" heigth="80" className="img-fluid"></img></div>
                     <div class="d-flex justify-content-center"><h1 className={styles.tituloNosotros}>Nuestros tratamientos</h1></div>
                     <div class="d-flex justify-content-center"><br></br></div>
                     <div class="d-flex justify-content-center"><h2 className={styles.tituloNosotros2}>Reserva ya</h2></div>
-                    <div class="d-flex justify-content-rigth" data-aos="zoom-in"><img src={decoracion5} id={styles.decoracion5} width="110" heigth="110" className="img-fluid"></img></div>
+                    <div class="d-flex justify-content-rigth" data-aos="zoom-in"><img src={decoracion5} id={styles.decoracion5} width="100" heigth="80" className="img-fluid"></img></div>
                     <div class="d-flex justify-content-center"><br></br></div>
                 </div>
                 
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.facial}>
                     <div className="d-flex  justify-content-center">
-                        <img src={higiene}  width="1200" height="800" className="img-fluid" alt="higieneFacial"/>
+                        <img src={higiene}  width="800" height="700" className="img-fluid" alt="higieneFacial"/>
                     </div>
                     
                     <div className="d-flex  justify-content-center" id={styles.higieneFacial}>
@@ -48,7 +48,7 @@ class Tratamientos extends Component{
                 </div>
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.hidral}>
                     <div className="d-flex  justify-content-center">
-                        <img src={higieneHydral}  width="1200" height="800" className="img-fluid" alt="higieneFacial"/>
+                        <img src={higieneHydral}  width="800" height="700" className="img-fluid" alt="higieneFacial"/>
                     </div>
                     
                     <div className="d-flex  justify-content-center" id={styles.higieneHydral}>
@@ -70,7 +70,7 @@ class Tratamientos extends Component{
                 </div>
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.containerPeeling}>
                     <div className="d-flex  justify-content-center">
-                        <img src={peeling}  width="1200" height="800" className="img-fluid" alt="higieneFacial"/>
+                        <img src={peeling}  width="800" height="700" className="img-fluid" alt="higieneFacial"/>
                     </div>
                     
                     <div className="d-flex  justify-content-center" id={styles.higienePeeling}>
@@ -91,7 +91,7 @@ class Tratamientos extends Component{
                 </div>
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.containerMakeUp}>
                     <div className="d-flex  justify-content-center">
-                    <img src={maquillaje}  width="1200" height="800" className="img-fluid" alt="higieneFacial"/>
+                    <img src={maquillaje}  width="800" height="700" className="img-fluid" alt="higieneFacial"/>
                     </div>
                     
                     <div className="d-flex  justify-content-center text" id={styles.maquillajeContenido}>

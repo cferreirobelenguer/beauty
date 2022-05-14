@@ -21,11 +21,11 @@ class Blog extends Component{
             <div className={styles.blogFondo}>
         
                 <div className="d-flex flex-column bd-highlight mb-3" id={styles.contenidoNosotros}>
-                    <div class="d-flex flex-row-reverse" data-aos="zoom-in"><img src={decoracion4} id={styles.decoracion4} width="110" heigth="110" className="img-fluid"></img></div>
+                    <div class="d-flex flex-row-reverse" data-aos="zoom-in"><img src={decoracion4} id={styles.decoracion4} width="100" heigth="80" className="img-fluid"></img></div>
                     <div class="d-flex justify-content-center"><h1 className={styles.tituloNosotros}>Nuestro blog</h1></div>
                     <div class="d-flex justify-content-center"><br></br></div>
                     <div class="d-flex justify-content-center"><h6 id={styles.blogCabecera}>Si te preocupa el estado de tu piel y quieres conocer trucos, consejos y productos para mantenerla cuidada los 365 días del año, estás en el lugar adecuado. Cada estación tiene unas características y, por ello, hay que cuidar la piel de formas distintas en verano o invierno, en primavera u otoño.</h6></div>
-                    <div class="d-flex justify-content-rigth" data-aos="zoom-in"><img src={decoracion5} id={styles.decoracion5} width="110" heigth="110" className="img-fluid"></img></div>
+                    <div class="d-flex justify-content-rigth" data-aos="zoom-in"><img src={decoracion5} id={styles.decoracion5} width="100" heigth="80" className="img-fluid"></img></div>
                     <div class="d-flex justify-content-center"><br></br></div>
                 </div>
                 <div className={styles.portadaNosotros} data-aos="fade-down">

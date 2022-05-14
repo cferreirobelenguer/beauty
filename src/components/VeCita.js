@@ -83,7 +83,10 @@ class VeCita extends Component{
                             <div className="d-flex  justify-content-center"><br></br></div>
                         </div>  
                             <input type="submit" className="btn text-decoration-none btn" value="Enviar" id={styles.botonTratamientos} onClick={this.getClientes}/>&nbsp;&nbsp;&nbsp;
+                            <div className="d-flex justify-content-center"><br></br></div>
                             <input type="reset" className="btn text-decoration-none btn" value="Limpiar" id={styles.botonTratamientos}/>
+                            <div className="d-flex justify-content-center"><br></br></div>
+                            <div className="d-flex justify-content-center"><br></br></div>
                         </form>
                     </div>
                 </div>
