@@ -4,6 +4,7 @@ import decoracion4 from '../assets/images/decoracion4.png';
 import decoracion5 from '../assets/images/decoracion5.png';
 import decoracion8 from '../assets/images/decoracion8.png';
 import newsletter from '../assets/images/newsletter.jpg';
+import axios from 'axios';
 import Swal from 'sweetalert2';
 //Variables de formulario de contacto
 var nombreContacto=false;
@@ -22,6 +23,12 @@ var nombreCorrecto=false;
 
 
 class Contacto extends Component{
+    state ={
+        //Defino el objeto al iniciar con un valor para que no me muestra al cargar el mensaje de que no se encuentran datos
+        resultados:[],
+        status:null,
+        
+    }
     //Creamos referencias vinculadas a los datos que recogemos del formulario
     //Identifica cada uno de los campos del formulario
     
@@ -110,10 +117,12 @@ class Contacto extends Component{
             console.log("Sí es número nombre newsletter: "+nombreCorrecto);
         }
         if(this.emailRef2.current.value.indexOf("@",0)!=-1){
-            emailNewsletter=this.emailRef.current.value;
+            emailNewsletter=this.emailRef2.current.value;
             emailCorrecto=true;
             console.log("Email contiene arroba newsletter: "+emailNewsletter);
             console.log("Email contiene arroba newsletter: "+emailCorrecto);
+            console.log("EMAIL NEWSLETTER: "+emailNewsletter);
+            
         }else{
             emailCorrecto=false;
             console.log("Email no contiene arroba newsletter: "+emailNewsletter);
@@ -127,6 +136,7 @@ class Contacto extends Component{
     }
     //Mensaje de confirmación de que se han recibido los datos del formulario de contacto
     recibido=()=>{
+    
         //Usamos la librería SweetAlert2 para las alertas
         if((nombreContacto==true)&&(emailContacto==true)&&(telefonoContacto==true)){
             Swal.fire({
@@ -141,6 +151,7 @@ class Contacto extends Component{
                 background: '#F3AFC9'
         
             })
+        
         }else{
             Swal.fire({
                 position: 'top-end',
@@ -174,6 +185,27 @@ class Contacto extends Component{
                 background: '#F3AFC9'
         
             })
+            //Petición de envío de email tras la validación del formulario
+            axios.post('http://localhost:3005/send-email',{
+           //Necesito el email que se recoge en el formulario
+                email:emailNewsletter,
+            })
+            //Se realiza la promesa
+            .then(res=>{
+            //Se introducen los datos de la petición dentro del objeto resultado
+                this.setState({
+                    
+                resultados:res.data,
+               //Estado sucess para indicar que la petición se ha realizado correctamente
+                status:"sucess"
+            
+            })
+            console.log("RESULTADOS: "+this.resultados);
+           //Console log que muestra el objeto resultado con los datos de la petición
+            console.log(this.state);
+        
+            })
+            
     
         }else{
             
