@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# TFG DESARROLLO DE APLICACIONES WEB- PILA MERN + CHATBOT EN DIALOGFLOW
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## nodeJS Express+ mongoDB para crear CRUD de petición de citas de una clínica estética. La aplicación permite al usuario ver sus citas, pedir cita, eliminar
+## o modificar la cita
 
-## Available Scripts
+# TECNOLOGÍAS Y CONTENIDO :
 
-In the project directory, you can run:
+## Front realizado con librería React
+## Despliegue de backend en heroku, bbdd mongoDB desplegada en mongoDB Atlas y front desplegado en netlify
+## nodeJS Express junto con la dependencia nodemailer para crear una newsletter
+## nodeJS para crear bots de twitter
+## Motor cognitivo dialogflow para crear chatbot que asesora al cliente sobre la clínica e integrado en la web y en facebook
+## NodeJS Express y Twilio para crear bot en whatapp
 
-### `npm start`
+# VISTA DESKTOP
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![image](https://user-images.githubusercontent.com/88061350/198082711-2c1a343c-5da8-4eec-ad7c-3690ddd233dd.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![image](https://user-images.githubusercontent.com/88061350/198082842-a9cb861d-3d27-4e81-a38c-b70448413ff0.png)
 
-### `npm test`
+![image](https://user-images.githubusercontent.com/88061350/198082936-8b46888c-a326-40c7-8f28-7301bac07cca.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://user-images.githubusercontent.com/88061350/198083033-009be7d9-fa32-4c08-ad7f-18f00ed4795b.png)
 
-### `npm run build`
+![image](https://user-images.githubusercontent.com/88061350/198083125-9dd0dd15-3193-479b-a6c4-3ec0b571823e.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![image](https://user-images.githubusercontent.com/88061350/198083202-b22672f5-6b45-406b-954f-c5dd6f3ff40e.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
