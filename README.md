@@ -26,3 +26,30 @@
 
 ![image](https://user-images.githubusercontent.com/88061350/198083202-b22672f5-6b45-406b-954f-c5dd6f3ff40e.png)
 
+![image](https://user-images.githubusercontent.com/88061350/198083583-591ffe1b-e845-4914-9032-86372b78b463.png)
+
+![image](https://user-images.githubusercontent.com/88061350/198083720-76564218-8dfb-4a8d-8216-08895be9d979.png)
+
+![image](https://user-images.githubusercontent.com/88061350/198083821-20998f10-783b-4dac-a017-b0e4a0d8f550.png)
+
+![image](https://user-images.githubusercontent.com/88061350/198083931-b526c83a-6ab4-4b38-a044-96c835b231ad.png)
+
+# VISTA RESPONSIVE (TODA LA WEB ES RESPONSIVE)
+
+![image](https://user-images.githubusercontent.com/88061350/198084171-f54cbc9f-8bf2-4d7f-bb88-95345bdf905f.png)
+
+# CHATBOT
+
+![image](https://user-images.githubusercontent.com/88061350/198084471-35c297c4-8062-412e-aa33-a5950c1eb4f7.png)
+
+# NEWSLETTER
+
+![image](https://user-images.githubusercontent.com/88061350/198085930-7b495736-d596-4048-b962-4f21adeb3957.png)
+
+
+
+
+
+
+
+
