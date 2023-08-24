@@ -10,7 +10,7 @@
 ## nodeJS Express junto con la dependencia nodemailer para crear una newsletter
 ## nodeJS para crear bots de twitter
 ## Motor cognitivo dialogflow para crear chatbot que asesora al cliente sobre la clínica e integrado en la web y en facebook
-## NodeJS Express y Twilio para crear bot en whatapp
+## NodeJS Express y Twilio para crear bot en whatsapp
 
 # VISTA DESKTOP
 
